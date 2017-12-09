@@ -4,7 +4,7 @@
                 <ul class="list-unstyled">
                     <li>Bern, Laupenstrasse 77</li>
                     <li> CH-3004</li>
-                    <li>info@comphub.store<li>
+                    <li>info@computerstore.ch<li>
                     <li>0794443322<li>
                 </ul>
             </div>

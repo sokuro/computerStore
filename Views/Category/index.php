@@ -17,7 +17,7 @@
                                     <h2><?=$value->name?></h2>
                                 </a>
                             </span>
-                            <span>Price:<?=$value->price?> CHF</span>
+                            <span>Price: <?=$value->price?> CHF</span>
                             <p>Specification: <?=$value->descrEN?></p>
                         </div>
                         <div class="article-buy">
@@ -28,7 +28,7 @@
                                 </p>
                                 <input type="hidden" name="price" value="<?=$value->price?>">
                                 <input type="hidden" name="id" value="<?=$value->id?>">
-                                <input class="btn" type="submit" value="Buy">
+                                <input class="btn" type="submit" value="buy">
                                 <!--onclick="alert('submit');event.preventDefault();" -->
                             </form>
                         </div>

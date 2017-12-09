@@ -4,8 +4,9 @@
     --main-emerland : #2ecc71;
     --main-belizehole : #2980b9;
     --main-dark: #494949;
-    --main-peterriver: #3498db;
+    --main-peterriver: rgba(242, 242, 242, 0.49);
     --main-lightgrey: lightgrey;
+    --main-darkred: #380426;
 }
 
 *{
@@ -34,7 +35,7 @@ header, section, footer, aside, nav, main, article, figure, div {
 }
 
 header{
-    background: var(--main-dark);
+    background: var(--main-darkred);
     color: #FFFFFF;
 }
 
@@ -49,7 +50,7 @@ header>div{
 
 header a{
     color: #FFFFFF;
-    text-underline: none;
+    text-decoration: none;
 }
 
 .logo{
@@ -61,13 +62,14 @@ header a{
 }
 
 #langs span{
-    color: yellow;
+    color: #ffffff;
     font-weight: bold;
     padding-right: 1em;
 }
 
 #langs li{
-    display: flex;
+    display: inline;
+    float: left;
     align-items: center;
     text-transform: uppercase;
     font-size: .7em;
@@ -75,15 +77,20 @@ header a{
 
 #langs a{
     text-decoration: none;
+
+    color: var(--main-lightgrey);
 }
 
 nav {
-    background: var(--main-belizehole);
+    background: var(--main-peterriver);
     color: #FFFFFF;
+
 }
 
 main{
-    background: var(--main-cloud);
+    /*background: var(--main-cloud);*/
+
+    background: #FFFFFF;
 }
 
 section{
@@ -92,8 +99,11 @@ section{
 
 article{
     display: flex;
-    background: var(--main-lightgrey);
+/*background: var(--main-lightgrey);*/
+
     margin-bottom: 5px;
+    border: solid #FFFFFF;
+    background:#c3c8df;
 }
 
 article:last-child{
@@ -110,6 +120,18 @@ article:last-child{
     justify-content: space-around;
     flex: 2;
 }
+
+.article-description span a{
+    text-decoration: none;
+    color: #380426;
+    font-size: 100%;
+}
+.article-description span a:hover{
+    text-decoration: underline;
+
+}
+
+
 
 .article-buy{
     flex: 1;
@@ -134,14 +156,26 @@ article:last-child{
 }
 
 .article-buy a, input[type='submit']{
-    background-color: #0f9d58;
-    color: #fff;
+    background-color: #c3c8df;
+    color: #380426;
+}
+.article-buy form  p label{
+    text-align:center;
+    padding:30px;
+}
+
+.article-buy input[type='submit']:hover{
+    background-color: #0b8b54;
+    color:#FFFFFF;
+    font-weight:bold;
 }
 
 .article-buy input[type='number']{
     border: none;
     width: 120px;
     height: 32px;
+    text-align: center;
+    font-size: 15px;
 }
 
 .title{
@@ -154,11 +188,11 @@ article:last-child{
 }
 
 aside{
-    background: var(--main-peterriver);
+    background: var(--main-darkred);
 }
 
 footer{
-    background: var(--main-dark);
+    background: var(--main-darkred);
     color: #FFFFFF;
     position: absolute;
     right: 0;
@@ -249,7 +283,7 @@ footer{
 
 .search input[type=text]{
     border: none;
-    background: var(--main-dark);
+    background: var(--main-lightgrey);
     color: white;
     width: 100%;
 }
@@ -258,18 +292,75 @@ footer{
     outline: none;
 }
 
-.nav-list li{
-    display: inline;
-    margin: .7em;
-    text-transform: UPPERCASE;
+.nav-list {
+    padding:.7em;
+    margin:0;
 }
 
+.nav-list li{
+    display: inline;
+    margin: 0;
+
+
+}
+
+
+.nav-list li a{
+   text-decoration: none;
+    color: #380426;
+    font-weight: normal;
+    padding: .7em;
+
+}
+
+.nav-list li a.aktiv{
+    background-color: #c3c8df;
+    color: #380426;
+
+
+
+}
+
+
+.nav-list li a:hover{
+   background-color: #c3c8df;
+    color: #380426;
+    font-weight: normal;
+
+
+}
+/*funktioniert noch nicht, damit wenn ausgewählt diese Farbe aktiviert ist*/
+#aktuell a{
+    background-color: #0d3838;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+
 .user-login{
-    background-color: #fff;
+    background-color: #FFFFFF;
     box-shadow: 0 2px 5px rgba(0,0,0,.4);
     margin: 1em auto;
     padding: 1em;
+
 }
+
+.loginlist{
+    display: flex;
+float: right;
+
+}
+
+
+.loginlist a:hover{
+    background-color: #c3c8df;
+    color: #380426;
+
+}
+.loginlist a {
+    padding: .7em;
+}
+
 
 .login-input
 {
