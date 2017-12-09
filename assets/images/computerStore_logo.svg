@@ -1,0 +1,17 @@
+<svg width="510" height="180" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="512" height="182" id="canvas_background" fill="none"/>
+  <g id="canvasGrid" display="none">
+   <rect id="svg_4" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" fill="#FFFFFF" stroke-width="0" x="2.999994" y="67.499999" width="300.000005" height="73.000002" id="svg_1" rx="10"/>
+  <text stroke="#000" transform="matrix(0.6477686279629788,0,0,0.9445150254611862,80.816522330115,34.405125914778154) " fill="#FFFFFF" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="323.084584" y="109.84623" id="svg_2" font-size="100" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" font-weight="normal"> store</text>
+  <text font-style="normal" stroke="#000" transform="matrix(1.0737684965133667,0,0,1.071310549298047,5.073768496513366,-21.214740243030256) " fill="#380426" stroke-width="0" stroke-opacity="null" x="2.00099" y="136.963817" id="svg_3" font-size="57" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" font-weight="bold">Computer</text>
+ </g>
+</svg>
