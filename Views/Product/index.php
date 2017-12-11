@@ -1,6 +1,6 @@
 <?php
     require_once(ROOT."/Views/Shared/header.php");
-    //Helper::varDebug($this->viewBag);
+//    Helper::varDebug($this->viewBag);
 ?>
 <main class="row reverse-sm">
     <section class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
