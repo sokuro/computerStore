@@ -43,7 +43,7 @@
                     <div class="user-data col-xs-6 col-sm-6 hidden-md">
                         <a href="/user/signin">
                             <span class="fa fa-user"></span>
-                            <span>denis</span>
+                            <span><?=$_SESSION['user']?></span>
                         </a>
                         <a href="/cart/index">
                             <span class="fa fa-shopping-cart"></span>
