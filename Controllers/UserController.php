@@ -52,7 +52,7 @@ class UserController extends Controller{
 
     public function actionSignup()
     {
-        Helper::varDebug($_POST);
+//        Helper::varDebug($_POST);
         $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
 
         if(!isset($_POST['username']) && !isset($_POST['password']) && !isset($_POST['firstName']) && !isset($_POST['lastName']) && !isset($_POST['email'])){

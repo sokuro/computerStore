@@ -14,7 +14,9 @@ class CategoryController extends Controller
         $this->viewBag['categories'] = Category::getAllByParentId($id);
         $this->viewBag['products'] = Product::getByCategoryId($id);
 
-        if(isset($_SESSION['sessid']))
+//        if(isset($_SESSION['sessid']))
+//        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1)
+        if(isset($_SESSION['logged_in']) && !$_SESSION['logged_in'])
             $this->viewBag['cartItems'] = CartItem::getItemsWithProducts($_SESSION['sessid']);
 
 //        Helper::varDebug($this->viewBag);

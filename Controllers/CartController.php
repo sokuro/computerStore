@@ -12,7 +12,9 @@ class CartController extends Controller
     {
         $this->template = "index";
 
-        if(isset($_SESSION['sessid']))
+//        if(isset($_SESSION['sessid']))
+//        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1)
+        if(isset($_SESSION['logged_in']) && !$_SESSION['logged_in'])
             $this->viewBag['cartItems'] = CartItem::getItemsWithProducts($_SESSION['sessid']);
 
         $this->getView("Cart", $this->template);
