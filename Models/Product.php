@@ -79,9 +79,9 @@ class Product extends BaseEntity
 
     public static function getImageById($id)
     {
-        $result = DB::doQuery('SELECT image FROM '.self::$imageTable.' i 
-                                JOIN products p ON i.id = p.id
-                                where i.id = '.$id);
+        $result = DB::doQuery('SELECT im.image FROM '.self::$tableName.' p 
+                                LEFT JOIN images im ON p.id = im.id
+                                where p.id = '.$id);
 
         $images = array();
 
