@@ -9,6 +9,7 @@ class ProductController extends Controller{
 
         $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
         $this->viewBag['product'] = Product::getByIdWithProperty($id);
+        $this->viewBag['image'] = Product::getImageById($id);
 
         if(isset($_SESSION['logged_in']))
         {

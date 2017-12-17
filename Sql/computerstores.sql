@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2017 at 09:19 PM
+-- Generation Time: Dec 17, 2017 at 04:19 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -134,7 +134,11 @@ INSERT INTO `carts` (`id`, `totalCost`) VALUES
 (109, NULL),
 (110, NULL),
 (111, NULL),
-(112, NULL);
+(112, NULL),
+(113, NULL),
+(114, NULL),
+(115, NULL),
+(116, NULL);
 
 -- --------------------------------------------------------
 
@@ -176,7 +180,11 @@ INSERT INTO `cart_items` (`id`, `productId`, `cartId`, `quantity`) VALUES
 (76, 1, 109, 1),
 (77, 2, 110, 1),
 (78, 2, 111, 1),
-(79, 2, 112, 1);
+(79, 2, 112, 1),
+(80, 10, 113, 1),
+(81, 11, 114, 1),
+(82, 12, 115, 1),
+(83, 10, 116, 1);
 
 -- --------------------------------------------------------
 
@@ -204,6 +212,45 @@ INSERT INTO `categories` (`id`, `nameEN`, `nameDE`, `nameFR`, `parentId`) VALUES
 (6, 'Software', 'Computerprogramme', 'Logiciel', 0),
 (7, 'Notebooks', 'Laptops', 'Ordinateur portable ', 1),
 (8, 'Workstation', 'Arbeitsstation', 'Workstation', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images`
+--
+
+CREATE TABLE `images` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `image` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `name`, `image`) VALUES
+(1, 'HP Spectre', '../assets/images/HPSpectre.png'),
+(2, 'HP 650', '../assets/images/HP650.png'),
+(3, 'HP z420', '../assets/images/HPZ420.jpg'),
+(4, 'Toshiba Sattelite', '../assets/images/ToshibaSatellite.jpg'),
+(5, 'Toshiba Workstation', '../assets/images/ToshibaWorkstation.jpg'),
+(6, 'Lenovo Yoga', '../assets/images/lenovoYoga.png'),
+(7, 'Lenovo ThinkPad', '../assets/images/lenovoThinkpad.png'),
+(8, 'Apple MacBook PRO', '../assets/images/AppleMacBookPro.jpg'),
+(9, 'Apple MacBook', '../assets/images/AppleMacBookPro.jpg'),
+(10, 'Corsair STRAFE', '../assets/images/CorsairStrafe.jpg'),
+(11, 'Roccat Suora FX RGB', '../assets/images/Roccat_Suora.jpg'),
+(12, 'Logitech Craft', '../assets/images/Logitech_Craft.jpg'),
+(13, 'Asus 1080', '../assets/images/Asus_1080.jpg'),
+(14, 'MSI Z370 ', '../assets/images/MSI_Godlike.jpg'),
+(15, 'Enermax Platinmax', '../assets/images/Enermax.jpg'),
+(16, 'HPE', '../assets/images/HPE_Server.jpg'),
+(17, 'Dell R630', '../assets/images/Dell_Server.jpg'),
+(18, 'Lenovo x3650', '../assets/images/Lenovo_Server.jpg'),
+(19, 'Cyberlink', '../assets/images/PowerDVD.jpg'),
+(20, 'Windows', '../assets/images/Windows.jpg'),
+(21, 'Adobe', '../assets/images/Adobe_Acrobat.jpg');
 
 -- --------------------------------------------------------
 
@@ -249,6 +296,7 @@ CREATE TABLE `products` (
   `price` decimal(10,2) NOT NULL,
   `brandId` int(11) NOT NULL,
   `categoryId` int(11) NOT NULL,
+  `image` int(11) NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -256,28 +304,28 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `descrEN`, `descrDE`, `descrFR`, `price`, `brandId`, `categoryId`, `created`) VALUES
-(1, 'HP Spectre', 'Business Notebook', 'Business Laptop', 'Business Ordinateur', '2500.00', 11, 7, '2017-01-06 21:16:34'),
-(2, 'HP 650', 'Home Office Notebook', 'Home Office Laptop', 'Home Office Ordinateur', '999.00', 11, 7, '2017-01-06 21:16:34'),
-(3, 'HP Workstation', 'Workstation', 'Workstation', 'Workstation', '4500.00', 11, 8, '2017-01-06 21:16:34'),
-(4, 'Toshiba Sattelite', 'Business Notebook', 'Business Laptop', 'Business Ordinateur', '2999.00', 9, 7, '2017-01-06 21:16:34'),
-(5, 'Toshiba Workstation', 'Workstation', 'Workstation', 'Workstation', '3999.00', 9, 8, '2017-01-06 21:16:34'),
-(6, 'Lenovo Yoga', 'Business Notebook', 'Business Laptop', 'Business Ordinateur', '2670.00', 5, 7, '2017-01-06 21:16:34'),
-(7, 'Lenovo ThinkPad', 'Home Office Notebook', 'Home Office Laptop', 'Home Office Ordinateur', '1300.00', 5, 7, '2017-01-06 21:16:34'),
-(8, 'Apple MacBook PRO', 'Business Notebook', 'Business Laptop', 'Business Ordinateur', '3400.00', 3, 7, '2017-01-06 21:16:34'),
-(9, 'Apple MacBook', 'Home Office Notebook', 'Home Office Laptop', 'Home Office Ordinateur', '1800.00', 3, 7, '2017-01-06 21:16:34'),
-(10, 'Corsair STRAFE', 'Corsair Keyboard', 'Corsair Tastatur', 'Corsair Clavier', '139.00', 15, 4, '2017-12-11 19:48:41'),
-(11, 'Roccat Suora FX RGB', 'Roccat Keyboard', 'Roccat Tastatur', 'Roccar Clavier', '149.00', 14, 4, '2017-12-11 19:52:01'),
-(12, 'Logitech Craft', 'Logitech Keyboard', 'Logitech Tastatur', 'Logitech Clavier', '199.00', 13, 4, '2017-12-11 19:53:45'),
-(13, 'Asus GeForce GTX 1080 Ti STRIX 11G', 'Asus Graphic Card', 'Asus Grafikkarte', 'Asus Cartes graphiques', '895.00', 1, 5, '2017-12-11 20:00:09'),
-(14, 'MSI Z370 GODLIKE', 'MSI Motherboard', 'MSI Mainboard', 'MSI Cartes mères', '515.00', 2, 5, '2017-12-11 20:00:09'),
-(15, 'Enermax Platimax 750W', 'Enermax PC Netzteil', 'Enermax Power supply', 'Enermax Alimentations PC', '175.00', 4, 5, '2017-12-11 20:04:10'),
-(16, 'HPE ProLiant DL360 Gen9', 'HPE Server', 'HPE Server', 'HPE Serveur', '1715.00', 6, 3, '2017-12-11 20:08:29'),
-(17, 'Dell PowerEdge R630', 'Dell Server', 'Dell Server', 'Dell Serveur', '1635.00', 7, 3, '2017-12-11 20:08:29'),
-(18, 'Lenovo x3650 M5', 'Lenovo Server', 'Lenovo Server', 'Lenovo Serveur', '1899.00', 5, 3, '2017-12-11 20:09:17'),
-(19, 'Cyberlink PowerDVD 17 Ultra', 'Cyberlink Multimedia', 'Cyberlink Multimedia', 'Cyberlink Multimédias', '87.00', 16, 6, '2017-12-11 20:15:28'),
-(20, 'Microsoft Windows 10 PRO', 'Microsoft OS', 'Microsoft Betriebssystem', 'Microsoft Système d''exploitation', '149.00', 17, 6, '2017-12-11 20:15:28'),
-(21, 'Adobe Acrobat Professional 2017', 'Adobe Office Application', 'Adobe Büroanwendung', 'Adobe Bureautique', '678.00', 18, 6, '2017-12-11 20:17:47');
+INSERT INTO `products` (`id`, `name`, `descrEN`, `descrDE`, `descrFR`, `price`, `brandId`, `categoryId`, `image`, `created`) VALUES
+(1, 'HP Spectre', 'Business Notebook', 'Business Laptop', 'Business Ordinateur', '2500.00', 11, 7, 1, '2017-01-06 21:16:34'),
+(2, 'HP 650', 'Home Office Notebook', 'Home Office Laptop', 'Home Office Ordinateur', '999.00', 11, 7, 2, '2017-01-06 21:16:34'),
+(3, 'HP Workstation', 'Workstation', 'Workstation', 'Workstation', '4500.00', 11, 8, 3, '2017-01-06 21:16:34'),
+(4, 'Toshiba Sattelite', 'Business Notebook', 'Business Laptop', 'Business Ordinateur', '2999.00', 9, 7, 4, '2017-01-06 21:16:34'),
+(5, 'Toshiba Workstation', 'Workstation', 'Workstation', 'Workstation', '3999.00', 9, 8, 5, '2017-01-06 21:16:34'),
+(6, 'Lenovo Yoga', 'Business Notebook', 'Business Laptop', 'Business Ordinateur', '2670.00', 5, 7, 6, '2017-01-06 21:16:34'),
+(7, 'Lenovo ThinkPad', 'Home Office Notebook', 'Home Office Laptop', 'Home Office Ordinateur', '1300.00', 5, 7, 7, '2017-01-06 21:16:34'),
+(8, 'Apple MacBook PRO', 'Business Notebook', 'Business Laptop', 'Business Ordinateur', '3400.00', 3, 7, 8, '2017-01-06 21:16:34'),
+(9, 'Apple MacBook', 'Home Office Notebook', 'Home Office Laptop', 'Home Office Ordinateur', '1800.00', 3, 7, 9, '2017-01-06 21:16:34'),
+(10, 'Corsair STRAFE', 'Corsair Keyboard', 'Corsair Tastatur', 'Corsair Clavier', '139.00', 15, 4, 10, '2017-12-11 19:48:41'),
+(11, 'Roccat Suora FX RGB', 'Roccat Keyboard', 'Roccat Tastatur', 'Roccar Clavier', '149.00', 14, 4, 11, '2017-12-11 19:52:01'),
+(12, 'Logitech Craft', 'Logitech Keyboard', 'Logitech Tastatur', 'Logitech Clavier', '199.00', 13, 4, 12, '2017-12-11 19:53:45'),
+(13, 'Asus GeForce GTX 1080 Ti STRIX 11G', 'Asus Graphic Card', 'Asus Grafikkarte', 'Asus Cartes graphiques', '895.00', 1, 5, 13, '2017-12-11 20:00:09'),
+(14, 'MSI Z370 GODLIKE', 'MSI Motherboard', 'MSI Mainboard', 'MSI Cartes mères', '515.00', 2, 5, 14, '2017-12-11 20:00:09'),
+(15, 'Enermax Platimax 750W', 'Enermax PC Netzteil', 'Enermax Power supply', 'Enermax Alimentations PC', '175.00', 4, 5, 15, '2017-12-11 20:04:10'),
+(16, 'HPE ProLiant DL360 Gen9', 'HPE Server', 'HPE Server', 'HPE Serveur', '1715.00', 6, 3, 16, '2017-12-11 20:08:29'),
+(17, 'Dell PowerEdge R630', 'Dell Server', 'Dell Server', 'Dell Serveur', '1635.00', 7, 3, 17, '2017-12-11 20:08:29'),
+(18, 'Lenovo x3650 M5', 'Lenovo Server', 'Lenovo Server', 'Lenovo Serveur', '1899.00', 5, 3, 18, '2017-12-11 20:09:17'),
+(19, 'Cyberlink PowerDVD 17 Ultra', 'Cyberlink Multimedia', 'Cyberlink Multimedia', 'Cyberlink Multimédias', '87.00', 16, 6, 19, '2017-12-11 20:15:28'),
+(20, 'Microsoft Windows 10 PRO', 'Microsoft OS', 'Microsoft Betriebssystem', 'Microsoft Système d''exploitation', '149.00', 17, 6, 20, '2017-12-11 20:15:28'),
+(21, 'Adobe Acrobat Professional 2017', 'Adobe Office Application', 'Adobe Büroanwendung', 'Adobe Bureautique', '678.00', 18, 6, 21, '2017-12-11 20:17:47');
 
 -- --------------------------------------------------------
 
@@ -368,7 +416,8 @@ INSERT INTO `users` (`id`, `username`, `firstName`, `lastName`, `password`, `ema
 (9, 'denis', 'Denis', 'Shev', 'e0d1679621df81166b768ba0336d1833', 'denis@google.com', 2),
 (10, 'testUser', 'test', 'user', 'b1e629c88419ba4595b40a8259b80b88', 'testuser@login.com', 2),
 (11, 'tester', 'testName', 'testSurname', '62bef8e9a6fdcc3a65f4ef423cbcea6a', 'tester@test.com', 2),
-(12, 'admin', 'admin', 'admin', '4b1fe94169de623188ceab9ab03bbc34', 'admin@admin.com', 2);
+(12, 'admin', 'admin', 'admin', '4b1fe94169de623188ceab9ab03bbc34', 'admin@admin.com', 2),
+(13, 'merhleen', 'Karol', 'Ugorcak', '6a97ae7bf585e7fe44c7e64e6d4f50c8', 'ugorcak@gmx.ch', 2);
 
 -- --------------------------------------------------------
 
@@ -451,7 +500,9 @@ INSERT INTO `user_sessions` (`id`, `sessId`, `userId`, `lang`, `created`) VALUES
 (49, 'mol4zdrex0ad8hpciqc05nag1ls93bu4', 11, 'de', '2017-01-18 22:17:59'),
 (50, 'kkex0saruqi57gi8z76mcseexr306r4d', 11, 'en', '2017-01-20 00:18:54'),
 (51, '2vzhsr1if9jry3bdg4bfmqk7xog5hf52', 11, 'en', '2017-01-20 13:51:23'),
-(52, 'a2h0dqlwk6xw51seh1nc376yprc70jxf', 12, 'en', '2017-01-20 15:54:22');
+(52, 'a2h0dqlwk6xw51seh1nc376yprc70jxf', 12, 'en', '2017-01-20 15:54:22'),
+(53, 'auk0rg9klemu2dccb3o091cms6x5bbz4', 13, 'en', '2017-12-16 22:27:47'),
+(54, 'l67kbozn8obqt2hey2z4yehmzyi14c57', 13, 'en', '2017-12-16 22:32:14');
 
 --
 -- Indexes for dumped tables
@@ -485,6 +536,12 @@ ALTER TABLE `cart_items`
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `images`
+--
+ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -549,17 +606,22 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
 --
 -- AUTO_INCREMENT for table `cart_items`
 --
 ALTER TABLE `cart_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `payments`
 --
@@ -589,12 +651,12 @@ ALTER TABLE `units`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `user_sessions`
 --
 ALTER TABLE `user_sessions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

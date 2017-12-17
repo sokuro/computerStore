@@ -4,8 +4,9 @@
 class Product extends BaseEntity
 {
     private static $tableName = "products";
+    private static $imageTable = "images";
 
-    public $id, $name, $descrEN, $descrDE, $descrFR, $price, $brandId, $categoryId;
+    public $id, $name, $descrEN, $descrDE, $descrFR, $price, $brandId, $categoryId, $image;
 
     public function __construct()
     {
@@ -15,19 +16,20 @@ class Product extends BaseEntity
     public static function create(Product $product)
     {
         $query =
-            "INSERT INTO " . self::$tableName . "(name, descrEN, descrDE, descrFR, price, brandId, categoryId) VALUES (?,?,?,?,?,?,?)";
+            "INSERT INTO " . self::$tableName . "(name, descrEN, descrDE, descrFR, price, brandId, categoryId, image) VALUES (?,?,?,?,?,?,?,?)";
 
         $preparedQuery = DB::getDbConnection()->prepare($query);
 
         $success = $preparedQuery->bind_param(
-            'ssssiii',
+            'ssssiiis',
             $product->name,
             $product->descrEN,
             $product->descrDE,
             $product->descrFR,
             $product->price,
             $product->brandId,
-            $product->categoryId
+            $product->categoryId,
+            $product->image
         );
 
         if(!$success){
@@ -73,6 +75,25 @@ class Product extends BaseEntity
 //        exit();
 
         return count($products) > 0 ? $products[0] : null;
+    }
+
+    public static function getImageById($id)
+    {
+        $result = DB::doQuery('SELECT image FROM '.self::$imageTable.' i 
+                                JOIN products p ON i.id = p.id
+                                where i.id = '.$id);
+
+        $images = array();
+
+        while($image = $result->fetch_object("Product"))
+        {
+            $images[] = $image;
+        }
+
+//        Helper::varDebug($products);
+//        exit();
+
+        return count($images) > 0 ? $images[0] : null;
     }
 
     public static function getByCategoryId($id)

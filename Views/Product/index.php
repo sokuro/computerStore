@@ -1,13 +1,16 @@
 <?php
     require_once(ROOT."/Views/Shared/header.php");
 //    Helper::varDebug($this->viewBag);
+
+    $image = $row['name'];
 ?>
 <main class="row reverse-sm">
     <section class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
         <?php if(isset($this->viewBag['product'])):?>
             <div class="sectionOverview">
                 <div class="productImage">
-                    <img src="/assets/images/AppleMacBookPro.jpg">
+<!--                    <img src="/assets/images/AppleMacBookPro.jpg">-->
+                    <img src="<?= $this->viewBag['image']->image ;?>">
                 </div>
                 <div class="shortSpecification">
                     <span><h2><?= $this->viewBag['product']->name ;?></h2></span>

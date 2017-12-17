@@ -35,7 +35,7 @@ class Session extends BaseEntity{
 
         $lastId = $preparedQuery->insert_id;
 
-        Helper::varDebug($lastId);
+//        Helper::varDebug($lastId);
 
         return $lastId;
     }
