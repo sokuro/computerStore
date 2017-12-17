@@ -8,6 +8,7 @@
             <?php foreach(Slider::$items as $key => $value): ?>
                 <div class="slider__item">
                     <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-990x618.jpg" alt="">
+<!--                    <img src="--><?//= $this->viewBag['image']->image ;?><!--">-->
                     <div class="slider__caption">
                         <?= $value->name?>
                         <a href="<?= UrlHelper::getProductUrl($value->id)?>"><?=Localizer::translate('To details')?></a>

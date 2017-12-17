@@ -13,6 +13,7 @@ class CategoryController extends Controller
         $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
         $this->viewBag['categories'] = Category::getAllByParentId($id);
         $this->viewBag['products'] = Product::getByCategoryId($id);
+        $this->viewBag['image'] = Product::getImageById($id);
 
 //        if(isset($_SESSION['sessid']))
 //        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1)

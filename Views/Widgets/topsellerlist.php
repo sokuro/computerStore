@@ -8,6 +8,7 @@
                 <article>
                     <div class="article-image">
                         <image src="/assets/images/placeholder.png">
+<!--                        <img src="--><?//= $this->viewBag['image']->image ;?><!--">-->
                     </div>
                     <div class="article-description">
                     <span>

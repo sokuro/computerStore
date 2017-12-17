@@ -9,7 +9,8 @@
                 <?php foreach($this->viewBag["products"] as $key=>$value): ?>
                     <article>
                         <div class="article-image">
-                            <image src="/assets/images/placeholder.png">
+<!--                            <image src="/assets/images/placeholder.png">-->
+                            <img src="<?= $this->viewBag['image']->image ;?>">
                         </div>
                         <div class="article-description">
                             <span>

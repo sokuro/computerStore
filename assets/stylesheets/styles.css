@@ -470,3 +470,8 @@ float: right;
         display: none !important;
     }
 }
+
+#imageProduct {
+    max-width: 400px;
+    max-height: 400px;
+}
