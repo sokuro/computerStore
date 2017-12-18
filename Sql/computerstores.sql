@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2017 at 04:19 PM
+-- Generation Time: Dec 18, 2017 at 11:40 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -230,27 +230,27 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`id`, `name`, `image`) VALUES
-(1, 'HP Spectre', '../assets/images/HPSpectre.png'),
-(2, 'HP 650', '../assets/images/HP650.png'),
-(3, 'HP z420', '../assets/images/HPZ420.jpg'),
-(4, 'Toshiba Sattelite', '../assets/images/ToshibaSatellite.jpg'),
-(5, 'Toshiba Workstation', '../assets/images/ToshibaWorkstation.jpg'),
-(6, 'Lenovo Yoga', '../assets/images/lenovoYoga.png'),
-(7, 'Lenovo ThinkPad', '../assets/images/lenovoThinkpad.png'),
-(8, 'Apple MacBook PRO', '../assets/images/AppleMacBookPro.jpg'),
-(9, 'Apple MacBook', '../assets/images/AppleMacBookPro.jpg'),
-(10, 'Corsair STRAFE', '../assets/images/CorsairStrafe.jpg'),
-(11, 'Roccat Suora FX RGB', '../assets/images/Roccat_Suora.jpg'),
-(12, 'Logitech Craft', '../assets/images/Logitech_Craft.jpg'),
-(13, 'Asus 1080', '../assets/images/Asus_1080.jpg'),
-(14, 'MSI Z370 ', '../assets/images/MSI_Godlike.jpg'),
-(15, 'Enermax Platinmax', '../assets/images/Enermax.jpg'),
-(16, 'HPE', '../assets/images/HPE_Server.jpg'),
-(17, 'Dell R630', '../assets/images/Dell_Server.jpg'),
-(18, 'Lenovo x3650', '../assets/images/Lenovo_Server.jpg'),
-(19, 'Cyberlink', '../assets/images/PowerDVD.jpg'),
-(20, 'Windows', '../assets/images/Windows.jpg'),
-(21, 'Adobe', '../assets/images/Adobe_Acrobat.jpg');
+(1, 'HP Spectre', '/assets/images/HPSpectre.png'),
+(2, 'HP 650', '/assets/images/HP650.png'),
+(3, 'HP z420', '/assets/images/HPZ420.jpg'),
+(4, 'Toshiba Sattelite', '/assets/images/ToshibaSatellite.jpg'),
+(5, 'Toshiba Workstation', '/assets/images/ToshibaWorkstation.jpg'),
+(6, 'Lenovo Yoga', '/assets/images/lenovoYoga.png'),
+(7, 'Lenovo ThinkPad', '/assets/images/lenovoThinkpad.png'),
+(8, 'Apple MacBook PRO', '/assets/images/AppleMacBookPro.jpg'),
+(9, 'Apple MacBook', '/assets/images/AppleMacBookPro.jpg'),
+(10, 'Corsair STRAFE', '/assets/images/CorsairStrafe.jpg'),
+(11, 'Roccat Suora FX RGB', '/assets/images/Roccat_Suora.jpg'),
+(12, 'Logitech Craft', '/assets/images/Logitech_Craft.jpg'),
+(13, 'Asus 1080', '/assets/images/Asus_1080.jpg'),
+(14, 'MSI Z370 ', '/assets/images/MSI_Godlike.jpg'),
+(15, 'Enermax Platinmax', '/assets/images/Enermax.jpg'),
+(16, 'HPE', '/assets/images/HPE_Server.jpg'),
+(17, 'Dell R630', '/assets/images/Dell_Server.jpg'),
+(18, 'Lenovo x3650', '/assets/images/Lenovo_Server.jpg'),
+(19, 'Cyberlink', '/assets/images/PowerDVD.jpg'),
+(20, 'Windows', '/assets/images/Windows.jpg'),
+(21, 'Adobe', '/assets/images/Adobe_Acrobat.jpg');
 
 -- --------------------------------------------------------
 
