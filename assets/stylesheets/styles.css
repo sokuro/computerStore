@@ -110,15 +110,23 @@ article:last-child{
     margin: 0;
 }
 
-.article-image img{
-    width: 100px;
-    height: 100px;
+.article-image {
+    background-color: whitesmoke;
+}
+
+.article-image > img{
+    min-width: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    padding-right: 10px;
 }
 
 .article-description{
+    background-color: whitesmoke;
     flex-direction: column;
     justify-content: space-around;
     flex: 2;
+    min-height: 100px;
 }
 
 .article-description span a{
@@ -128,12 +136,11 @@ article:last-child{
 }
 .article-description span a:hover{
     text-decoration: underline;
-
 }
 
 
-
 .article-buy{
+    background-color: whitesmoke;
     flex: 1;
     align-items: center;
 }

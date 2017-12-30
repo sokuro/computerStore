@@ -4,7 +4,6 @@
 class Product extends BaseEntity
 {
     private static $tableName = "products";
-    private static $imageTable = "images";
 
     public $id, $name, $descrEN, $descrDE, $descrFR, $price, $brandId, $categoryId, $image;
 
@@ -77,23 +76,41 @@ class Product extends BaseEntity
         return count($products) > 0 ? $products[0] : null;
     }
 
+//    public static function getImageById($id)
+//    {
+//        $result = DB::doQuery('SELECT im.image FROM '.self::$tableName.' p
+//                                LEFT JOIN images im ON p.id = im.id
+//                                where p.id = '.$id);
+//
+//        $images = array();
+//
+//        while($image = $result->fetch_object("Product"))
+//        {
+//            $images[] = $image;
+//        }
+//
+////        Helper::varDebug($products);
+////        exit();
+//
+//        return count($images) > 0 ? $images[0] : null;
+//    }
+
     public static function getImageById($id)
     {
-        $result = DB::doQuery('SELECT im.image FROM '.self::$tableName.' p 
-                                LEFT JOIN images im ON p.id = im.id
-                                where p.id = '.$id);
+        $result = DB::doQuery('SELECT image FROM '.self::$tableName.' p)
+                                WHERE p.id = '.$id);
 
-        $images = array();
+        $products = array();
 
-        while($image = $result->fetch_object("Product"))
+        while($product = $result->fetch_object("Product"))
         {
-            $images[] = $image;
+            $products[] = $product;
         }
 
 //        Helper::varDebug($products);
 //        exit();
 
-        return count($images) > 0 ? $images[0] : null;
+        return count($products) > 0 ? $products[0] : null;
     }
 
     public static function getByCategoryId($id)

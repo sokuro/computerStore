@@ -174,35 +174,68 @@
             </div>
 
             <!-- User entries -->
+<!--            <div>-->
+<!--                <p><h2 id="dataEntry">Please enter the shipping data</h2></p>-->
+<!---->
+<!--                <p class="dataEntry"><label>First Name: </label>-->
+<!--                    <input name="firstName" value="--><?//= $firstName;?><!--"/>-->
+<!--                    <mark>--><?//= $firstNameErr;?><!--</mark>-->
+<!--                </p>-->
+<!--                <p class="dataEntry"><label>Last Name: </label>-->
+<!--                    <input name="lastName" value="--><?//= $lastName;?><!--"/>-->
+<!--                    <mark>--><?//= $lastNameErr;?><!--</mark>-->
+<!--                </p>-->
+<!--                <p class="dataEntry"><label>Street: </label>-->
+<!--                    <input name="street" value="--><?//= $street;?><!--"/>-->
+<!--                    <mark>--><?//= $streetErr;?><!--</mark>-->
+<!--                </p>-->
+<!--                <p class="dataEntry"><label>City: </label>-->
+<!--                    <input name="city" value="--><?//= $city;?><!--"/>-->
+<!--                    <mark>--><?//= $cityErr;?><!--</mark>-->
+<!--                </p>-->
+<!--                <p class="dataEntry"><label>State: </label>-->
+<!--                    <input name="state" value="--><?//= $state;?><!--"/>-->
+<!--                    <mark>--><?//= $stateErr;?><!--</mark>-->
+<!--                </p>-->
+<!--                <p class="dataEntry"><label>Zip: </label>-->
+<!--                    <input name="zip" value="--><?//= $zip;?><!--"/>-->
+<!--                    <mark>--><?//= $zipErr;?><!--</mark>-->
+<!--                </p>-->
+<!--                <p class="dataEntry"><label>E-Mail: </label>-->
+<!--                    <input name="email" value="--><?php //echo $email;?><!--"/>-->
+<!--                    <mark>--><?php //echo $emailErr;?><!--</mark>-->
+<!--                </p>-->
+<!--            </div>-->
+
             <div>
                 <p><h2 id="dataEntry">Please enter the shipping data</h2></p>
 
-                <p class="dataEntry"><label>First Name: </label>
-                    <input name="firstName" value="<?= $firstName;?>"/>
+                <p><label>First Name: </label>
+                    <input name="firstName" class="dataEntry" value="<?= $firstName;?>"/>
                     <mark><?= $firstNameErr;?></mark>
                 </p>
-                <p class="dataEntry"><label>Last Name: </label>
-                    <input name="lastName" value="<?= $lastName;?>"/>
+                <p><label>Last Name: </label>
+                    <input name="lastName" class="dataEntry" value="<?= $lastName;?>"/>
                     <mark><?= $lastNameErr;?></mark>
                 </p>
-                <p class="dataEntry"><label>Street: </label>
-                    <input name="street" value="<?= $street;?>"/>
+                <p><label>Street: </label>
+                    <input name="street" class="dataEntry" value="<?= $street;?>"/>
                     <mark><?= $streetErr;?></mark>
                 </p>
-                <p class="dataEntry"><label>City: </label>
-                    <input name="city" value="<?= $city;?>"/>
+                <p><label>City: </label>
+                    <input name="city" class="dataEntry" value="<?= $city;?>"/>
                     <mark><?= $cityErr;?></mark>
                 </p>
-                <p class="dataEntry"><label>State: </label>
-                    <input name="state" value="<?= $state;?>"/>
+                <p><label>State: </label>
+                    <input name="state" class="dataEntry" value="<?= $state;?>"/>
                     <mark><?= $stateErr;?></mark>
                 </p>
-                <p class="dataEntry"><label>Zip: </label>
-                    <input name="zip" value="<?= $zip;?>"/>
+                <p><label>Zip: </label>
+                    <input name="zip" class="dataEntry" value="<?= $zip;?>"/>
                     <mark><?= $zipErr;?></mark>
                 </p>
-                <p class="dataEntry"><label>E-Mail: </label>
-                    <input name="email" value="<?php echo $email;?>"/>
+                <p><label>E-Mail: </label>
+                    <input name="email" class="dataEntry" value="<?php echo $email;?>"/>
                     <mark><?php echo $emailErr;?></mark>
                 </p>
             </div>

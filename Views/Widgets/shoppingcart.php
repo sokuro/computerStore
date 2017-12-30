@@ -11,7 +11,7 @@
             <?php foreach(ShoppingCart::$items as $key => $value): ?>
                 <li class="cart-item">
                     <div class="cart-item-details">
-                        <img class="thumbnail" src="/assets/images/placeholder.png">
+                        <img class="thumbnail" src="<?=$value->image ?>">
                         <div>
                             <div class="item-name"><?=$value->name ?></div>
                             <div class="item-descr"><?= CultureHelper::getProperty($value, "descr")?></div>

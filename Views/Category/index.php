@@ -5,12 +5,11 @@
 <main class="row reverse-sm">
     <section class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
         <div class="section-content">
-            <?php if(isset($this->viewBag["products"])):?>
-                <?php foreach($this->viewBag["products"] as $key=>$value): ?>
+            <?php if(isset($this->viewBag['products'])):?>
+                <?php foreach($this->viewBag['products'] as $key=>$value): ?>
                     <article>
                         <div class="article-image">
-<!--                            <image src="/assets/images/placeholder.png">-->
-                            <img src="<?= $this->viewBag['image']->image ;?>">
+                            <img src="<?= $value->image ;?>">
                         </div>
                         <div class="article-description">
                             <span>

@@ -18,7 +18,7 @@
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
-    background-color: #444;
+    /*background-color: #444;*/
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -46,7 +46,8 @@
 }
 .slider__item img {
     display: block;
-    max-width: 100%;
+    align-items: center;
+    max-width: 50%;
     height: auto;
 }
 .slider__switch span {
