@@ -35,7 +35,6 @@
                         <div>
                             <a class="logo" href="/">
                                 <img src="/assets/images/computerStore_logo.svg">
-                                <!--<img src="/assets/images/logo2.svg">-->
                             </a>
                         </div>
                     </div>
@@ -53,7 +52,7 @@
 
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 end-xs hidden-sm">
 
-                        <div id="login" class="col-xs-6">
+                        <div id="login" class="col-xs-4">
                             <ul class="loginlist list-unstyled">
                                 <?php if(!isset($_SESSION['user'])):?>
                                     <a href="/user/login"
@@ -68,7 +67,7 @@
                                 <?php endif; ?>
                             </ul>
                         </div>
-                        <div id="langs" class="col-xs-6">
+                        <div id="langs" class="col-xs-3">
                             <ul class="list-unstyled f16">
                                 <?php foreach(CultureHelper::$supportedLangs as $key => $value):?>
                                     <?php if($key === $_SESSION['lang']):?>
@@ -83,7 +82,10 @@
                                 <?php endforeach; ?>
                             </ul>
                         </div>
-
+                        <div class="search col-xs-4 col-sm-4 col-md-4 col-lg-3">
+                            <span class="fa fa-search"></span>
+                            <input type="text" placeholder="Search">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,7 +96,8 @@
                     </div>
                     <div class="search col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <span class="fa fa-search"></span>
-                        <input type="text" placeholder="Search"></div>
+                        <input type="text" placeholder="Search">
+                    </div>
                 </div>
             </div>
             </div>

@@ -283,7 +283,7 @@ footer{
 }
 
 .item-count input[type='number']{
-    width: 35;
+    width: 35px;
     height: 20px;
 }
 
@@ -291,8 +291,8 @@ footer{
 .search input[type=text]{
     border: none;
     background: var(--main-lightgrey);
-    color: white;
-    width: 100%;
+    /*color: white;*/
+    /*width: 100%;*/
 }
 
 .search input:focus{
