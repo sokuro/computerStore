@@ -84,7 +84,7 @@
                         </div>
                         <div class="search col-xs-4 col-sm-4 col-md-4 col-lg-3">
                             <span class="fa fa-search"></span>
-                            <input type="text" placeholder="Search">
+                            <input type="text" placeholder="<?=Localizer::translate("Search")?>">
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="search col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <span class="fa fa-search"></span>
-                        <input type="text" placeholder="Search">
+                        <input type="text" placeholder="<?=Localizer::translate("Search")?>">
                     </div>
                 </div>
             </div>

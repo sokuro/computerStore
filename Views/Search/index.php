@@ -14,7 +14,7 @@
         <div>
             <form>
                 <div>
-                    <input type="text" id="searchWindow" placeholder="Search..">
+                    <input type="text" id="searchWindow" placeholder="<?=Localizer::translate("Search")?>">
                 </div>
                 <div>
                     <input type="button" name="search" id="searchItem" value="search">
