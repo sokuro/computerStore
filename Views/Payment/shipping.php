@@ -15,22 +15,22 @@ require_once(ROOT."/Views/Shared/header.php");
                     <form action="/payment/confirm" method="post">
                         <div class="address-input">
                             <label><?=Localizer::translate("City")?></label>
-                            <input type="text" name="city">
+                            <input type="text" name="city" required>
                         </div>
 
                         <div class="address-input">
                             <label><?=Localizer::translate("Street")?></label>
-                            <input type="text" name="street">
+                            <input type="text" name="street" required>
                         </div>
 
                         <div class="address-input">
                             <label><?=Localizer::translate("State")?></label>
-                            <input type="text" name="state">
+                            <input type="text" name="state" required>
                         </div>
 
                         <div class="address-input">
                             <label><?=Localizer::translate("Zip")?></label>
-                            <input type="number" pattern="[0-9]{4}" name="zip">
+                            <input type="number" pattern="[0-9]{4}" name="zip" required>
                         </div>
 
                         <input class="btn" type="submit" value="<?=Localizer::translate('To Confirm')?>">
