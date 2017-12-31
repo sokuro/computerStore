@@ -63,9 +63,9 @@ require_once(ROOT."/Views/Shared/header.php");
                                     <?=Localizer::translate('Payment method')?>
                                 </h3>
 
-                                <input type="radio" name="payment" value="by delivery" /><?=Localizer::translate('By delivery')?><br />
-                                <input type="radio" name="payment" value="credit card" /><?=Localizer::translate('Credit card')?><br />
-                                <input type="radio" name="payment" value="pay pal" /><?=Localizer::translate('PayPal')?><br />
+                                <input type="radio" name="payment" value="by delivery" required/><?=Localizer::translate('By delivery')?><br />
+                                <input type="radio" name="payment" value="credit card" required/><?=Localizer::translate('Credit card')?><br />
+                                <input type="radio" name="payment" value="pay pal" required/><?=Localizer::translate('PayPal')?><br />
 
                                 <h3>
                                     <span class="fa fa-gift"></span>
