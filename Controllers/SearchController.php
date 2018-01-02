@@ -39,7 +39,7 @@ class SearchController extends Controller
 //            $searchResults = array();
 //
 //            foreach ($products as $product) {
-//                $searchResults[] = new SearchResult($product);
+//                $searchResults[] = new SearchResultWidget($product);
 //            }
 //            echo json_encode($searchResults);
 //

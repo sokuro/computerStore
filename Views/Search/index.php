@@ -44,7 +44,7 @@
                         </div>
                         <div class="article-description">
                         <span>
-                            <a href="<?=UrlHelper::getSearchUrl($value->name)?>">
+                            <a href="<?=UrlHelper::getProductUrl($value->id)?>">
                                 <h2><?=$value->name?></h2>
                             </a>
                         </span>

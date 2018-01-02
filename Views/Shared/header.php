@@ -24,6 +24,7 @@
 
         <!--    Scripts -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script type="text/javascript" src="/assets/scripts/search.js"></script>
 
     </head>
 
@@ -84,11 +85,11 @@
                         </div>
                         <div class="search col-xs-4 col-sm-4 col-md-4 col-lg-3">
 <!--                            <a href="/product/show/1">-->
-                            <a href="Views\Search\index.php">
-<!--                            <a href="--><?//=UrlHelper::getSearchUrl($name)?><!--">-->
+<!--                            <a href="Views\Search\index.php">-->
+                            <a id="searchButton" href="#">
                                 <span class="fa fa-search"></span>
                             </a>
-                            <input type="text" placeholder="<?=Localizer::translate("Search")?>" value="<?php $name ?>">
+                            <input id="searchField" type="text" placeholder="<?=Localizer::translate("Search")?>">
                         </div>
                     </div>
                 </div>

@@ -132,6 +132,8 @@ class Product extends BaseEntity
     {
         $result = DB::doQuery('SELECT * FROM '.self::$tableName.' WHERE name like \'%'.$name.'%\'');
 
+        $products = array();
+
         while($product = $result->fetch_object("Product"))
         {
             $products[] = $product;
