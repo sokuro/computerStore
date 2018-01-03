@@ -39,5 +39,8 @@
 	"Price": "Price",
 	"Brand ID": "Brand ID",
 	"Category ID": "Category ID",
-	"Image": "Image"
+	"Image": "Image",
+	"Category Name EN": "Category Name EN",
+	"Category Name DE": "Category Name DE",
+	"Category Name FR": "Category Name FN"
 }
