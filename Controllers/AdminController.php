@@ -99,6 +99,25 @@ class AdminController extends Controller
         }
     }
 
+    public function actionRemoveCategory($params){
+
+        $categoryId = (int)$params[0];
+
+        $this->viewBag['categories'] = Category::getAll();
+
+//        $this->viewBag['removeCategory'] = Category::deleteById($id);
+
+        $this->template = "removeCategory";
+
+        $category = Category::get($categoryId);
+
+//        if(is_int($categoryId) && $category !== null) {
+//            Category::deleteById($category);
+//        }
+
+        $this->getView("Admin", $this->template);
+    }
+
     public function actionAddUser()
     {
         if(!isset($_POST['username']) && !isset($_POST['password']) && !isset($_POST['firstName']) && !isset($_POST['lastName']) && !isset($_POST['email'])){

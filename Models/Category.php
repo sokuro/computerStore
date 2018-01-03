@@ -43,7 +43,7 @@ class Category extends BaseEntity{
         $result->execute();
     }
 
-    public function get($id)
+    public static function get($id)
     {
         return DB::doQuery('SELECT * FROM ' . self::$tableName . ' WHERE id = ' . $id);
     }
