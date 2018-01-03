@@ -40,6 +40,13 @@ class User extends BaseEntity{
         return $lastId;
     }
 
+    public static function deleteById($id)
+    {
+        $result = DB::doQuery('DELETE * FROM ' . self::$tableName . ' WHERE id = ' . $id);
+
+        $result->execute();
+    }
+
     public static function getUser($email, $password)
     {
         $hashPassword = Helper::getHash($password);

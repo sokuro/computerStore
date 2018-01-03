@@ -56,6 +56,13 @@ class Product extends BaseEntity
         return count($products) > 0 ? $products[0] : null;
     }
 
+    public static function deleteById($id)
+    {
+        $result = DB::doQuery('DELETE * FROM ' . self::$tableName . ' WHERE id = ' . $id);
+
+        $result->execute();
+    }
+
     public static function getByIdWithProperty($id)
     {
         $result = DB::doQuery('SELECT p.* FROM '.self::$tableName.' p 
