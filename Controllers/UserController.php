@@ -34,6 +34,7 @@ class UserController extends Controller{
 
                 $_SESSION['user'] = $user->username;
                 $_SESSION['sessid'] = $sessid;
+                $_SESSION['role'] = $user->roleId;
                 $_SESSION['logged_in'] = true;
 
                 $this->viewBag['user'] = $user;
