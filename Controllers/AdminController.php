@@ -52,6 +52,34 @@ class AdminController extends Controller
         }
     }
 
+    public function actionAddCategory()
+    {
+        $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
+
+        if(!isset($_POST['nameEN']) && !isset($_POST['nameDE']) && !isset($_POST['nameFR']) && !isset($_POST['parentId'])) {
+            $this->template = "addCategory";
+            $this->getView("Admin", $this->template);
+        }else{
+            $errors = $this->formValidateCategory($_POST);
+
+            if (count($errors) !== 0){
+                $this->viewBag["errors"] = $errors;
+                $this->template = "addCategory";
+            }else{
+                $category = new Category();
+                $category->nameEN = $_POST['nameEN'];
+                $category->nameDE = $_POST['nameDE'];
+                $category->nameFR = $_POST['nameFR'];
+                $category->parentId = $_POST['parentId'];
+                $category->id = Category::create($category);
+
+                $this->template = "index";
+            }
+
+            $this->getView("Admin", $this->template);
+        }
+    }
+
     public function actionAddUser()
     {
         if(!isset($_POST['username']) && !isset($_POST['password']) && !isset($_POST['firstName']) && !isset($_POST['lastName']) && !isset($_POST['email'])){
@@ -135,12 +163,32 @@ class AdminController extends Controller
         return $errors;
     }
 
+    private function formValidateCategory($array)
+    {
+        $errors = array();
+
+        if(strlen($array["nameEN"]) <= 0)
+            $errors[] = "nameEN is too short";
+
+        if(strlen($array["nameDE"]) <= 0)
+            $errors[] = "nameDE is too short";
+
+        if(strlen($array["nameFR"]) <= 0)
+            $errors[] = "nameFR is too short";
+
+        if(strlen($array["parentId"]) <= 0)
+            $errors[] = "parentId is too short";
+
+        return $errors;
+    }
+
     public function actionError()
     {
         $this->template = "error";
 
         $this->getView("Admin", $this->template);
     }
+
 
 
 }
