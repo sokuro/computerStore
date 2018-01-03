@@ -19,7 +19,7 @@ class AdminController extends Controller
         $this->getView("Admin", $this->template);
     }
 
-    public function actionAdd()
+    public function actionAddProduct()
     {
 //        Helper::varDebug($_POST);
         $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
@@ -28,7 +28,7 @@ class AdminController extends Controller
             $this->template = "addProduct";
             $this->getView("Admin", $this->template);
         }else{
-            $errors = $this->formValidate($_POST);
+            $errors = $this->formValidateProduct($_POST);
 
             if (count($errors) !== 0){
                 $this->viewBag["errors"] = $errors;
@@ -45,14 +45,41 @@ class AdminController extends Controller
                 $product->image = $_POST['image'];
                 $product->id = Product::create($product);
 
-                $this->template = "addProduct";
+                $this->template = "index";
             }
 
             $this->getView("Admin", $this->template);
         }
     }
 
-    private function formValidate($array){
+    public function actionAddUser()
+    {
+        if(!isset($_POST['username']) && !isset($_POST['password']) && !isset($_POST['firstName']) && !isset($_POST['lastName']) && !isset($_POST['email'])){
+            $this->template = "addUser";
+            $this->getView("Admin", $this->template);
+        }else{
+            $errors = $this->formValidateUser($_POST);
+
+            if (count($errors) !== 0){
+                $this->viewBag["errors"] = $errors;
+                $this->template = "addUser";
+            }else{
+                $user = new User();
+                $user->email = $_POST['email'];
+                $user->password = Helper::getHash($_POST['password']);
+                $user->username = $_POST['username'];
+                $user->firstName = $_POST['firstName'];
+                $user->lastName = $_POST['lastName'];
+                $user->id = User::create($user);
+
+                $this->template = "index";
+            }
+
+            $this->getView("Admin", $this->template);
+        }
+    }
+
+    private function formValidateProduct($array){
         $errors = array();
 
         if(strlen($array["name"]) <= 0)
@@ -82,11 +109,38 @@ class AdminController extends Controller
         return $errors;
     }
 
+
+    private function formValidateUser($array){
+        $errors = array();
+
+        if (filter_var($array["email"], FILTER_VALIDATE_EMAIL)){
+            if(User::getByEmail($array["email"]) !== null)
+                $errors[] = "user with this email already exist";
+        }else{
+            $errors[] = "email is invalid";
+        }
+
+        if(strlen($array["username"]) <= 0)
+            $errors[] = "username is too short";
+
+        if(strlen($array["password"]) < 8)
+            $errors[] = "password is too short";
+
+        if(strlen($array["firstName"]) < 1)
+            $errors[] = "first name is too short";
+
+        if(strlen($array["lastName"]) < 1)
+            $errors[] = "last name is too short";
+
+        return $errors;
+    }
+
     public function actionError()
     {
         $this->template = "error";
 
         $this->getView("Admin", $this->template);
     }
+
 
 }
