@@ -17,8 +17,8 @@ class UrlHelper
         return "/search/show/".$name;
     }
 
-//    public static function getAdminUrl()
-//    {
-//        return "/admin/show";
-//    }
+    public static function getAdminUrl()
+    {
+        return "/admin/show";
+    }
 }

@@ -207,7 +207,7 @@ class Product extends BaseEntity
         return $products;
     }
 
-    public function getAllProducts()
+    public static function getAllProducts()
     {
         $result = DB::doQuery('SELECT * FROM ' . self::$tableName);
 

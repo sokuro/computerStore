@@ -80,7 +80,7 @@ class User extends BaseEntity{
         return null;
     }
 
-    public function getAllUsers()
+    public static function getAllUsers()
     {
         $result = DB::doQuery('SELECT * FROM ' . self::$tableName);
 

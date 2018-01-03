@@ -1,21 +1,20 @@
 <?php
 require_once(ROOT.'/Controllers/Controller.php');
 require_once(ROOT.'/Models/Product.php');
+require_once(ROOT.'/Models/Admin.php');
 
 
 class AdminController extends Controller
 {
     protected $template;
 
-//    public function actionShow($product)
+
     public function actionShow()
     {
-//        $product = $params[0];
-//        $product = new Product();
 
         $this->template = "index";
 
-//        $this->viewBag['products'] = Product::create($product);
+//        $this->viewBag['menuItemsAdmin'] = Admin::showElements();
 
         $this->getView("Admin", $this->template);
     }
