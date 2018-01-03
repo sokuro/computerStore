@@ -61,6 +61,11 @@ class User extends BaseEntity{
         return null;
     }
 
+    public static function getUserById($id)
+    {
+        return DB::doQuery('SELECT * FROM' .self::$tableName . 'WHERE id = ' . $id);
+    }
+
     public static function getUserBySessId($sessId){
 
         $result = DB::doQuery(  'SELECT * FROM ' . self::$tableName . ' u '.

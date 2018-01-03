@@ -145,6 +145,25 @@ class AdminController extends Controller
         }
     }
 
+    public function actionRemoveUser($params){
+
+        $userId = (int)$params[0];
+
+        $this->viewBag['users'] = User::getAllUsers();
+
+//        $this->viewBag['removeUser'] = User::deleteById($id);
+
+        $this->template = "removeUser";
+
+        $user = User::getUserById($userId);
+
+//        if(is_int($userId) && $user !== null) {
+//            User::deleteById($user);
+//        }
+
+        $this->getView("Admin", $this->template);
+    }
+
     private function formValidateProduct($array){
         $errors = array();
 
