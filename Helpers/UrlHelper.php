@@ -12,10 +12,13 @@ class UrlHelper
         return "/product/show/".$id;
     }
 
-    // TODO: bind Search View
     public static function getSearchUrl(string $name)
     {
         return "/search/show/".$name;
-//        return SearchController::class($name);
-}
+    }
+
+//    public static function getAdminUrl()
+//    {
+//        return "/admin/show";
+//    }
 }

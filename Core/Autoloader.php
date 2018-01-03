@@ -9,6 +9,7 @@ require_once("Controllers/Controller.php");
 require_once("Controllers/Widget.php");
 require_once("Controllers/HomeController.php");
 require_once("Controllers/UserController.php");
+require_once("Controllers/AdminController.php");
 require_once("Controllers/CategoryController.php");
 require_once("Controllers/ProductController.php");
 require_once("Controllers/PaymentController.php");
