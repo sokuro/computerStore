@@ -79,5 +79,16 @@ class User extends BaseEntity{
 
         return null;
     }
+
+    public function getAllUsers()
+    {
+        $result = DB::doQuery('SELECT * FROM ' . self::$tableName);
+
+        if($result != null){
+            return $result->fetch_object(__CLASS__);
+        }
+
+        return null;
+    }
 }
 ?>
