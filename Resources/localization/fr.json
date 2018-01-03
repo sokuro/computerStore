@@ -30,9 +30,11 @@
 	"Search": "Cherche",
 	"Search result": "Cherche",
 	"Product Name": "Produit Nombre",
-	"Description": "Description",
-	"Price": "Price",
-	"Brand ID": "Brand ID",
-	"Category ID": "Category ID",
+	"Description EN": "Description EN",
+	"Description DE": "Description DE",
+	"Description FR": "Description FR",
+	"Price": "Prix",
+	"Brand ID": "Marque ID",
+	"Category ID": "Catégorie ID",
 	"Image": "Image"
 }
