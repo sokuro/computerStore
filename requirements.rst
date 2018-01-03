@@ -5,7 +5,7 @@ Requirements
 +   database-driven product list and menus
 +   multi-language support
 +   shopping cart administration interface
++   product search
 -customer and administrator accounts
 -sending email
--product search
 -some AJAX-based features
