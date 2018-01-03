@@ -25,5 +25,11 @@
 	"Confirm": "Confirm",
 	"Your order will be shipped" : "Your order will be shipped",
 	"Search": "Search",
-	"Search result": "Search results"
+	"Search result": "Search results",
+	"Product Name": "Product Name",
+	"Description": "Description",
+	"Price": "Price",
+	"Brand ID": "Brand ID",
+	"Category ID": "Category ID",
+	"Image": "Image"
 }

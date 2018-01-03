@@ -28,5 +28,11 @@
 	"Confirm": "Bestätigen",
 	"Your order will be shipped" : "Deine Bestellung wird bald versendet",
 	"Search": "Suche",
-	"Search result": "Suchergebnisse"
+	"Search result": "Suchergebnisse",
+	"Product Name": "Produkt Name",
+	"Description": "Beschreibung",
+	"Price": "Preis",
+	"Brand ID": "Marke ID",
+	"Category ID": "Kategorie ID",
+	"Image": "Bild"
 }
