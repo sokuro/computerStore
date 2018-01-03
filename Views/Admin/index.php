@@ -12,7 +12,7 @@
                     <a href="addProduct">
                         <button type="button" class="btn"><?=Localizer::translate('Add Product')?></button>
                     </a>
-                    <a href="deleteProduct">
+                    <a href="removeProduct">
                         <button type="button" class="btn"><?=Localizer::translate('Remove Product')?></button>
                     </a>
                 </div>
@@ -21,7 +21,7 @@
                     <a href="addCategory">
                         <button type="button" class="btn"><?=Localizer::translate('Add Category')?></button>
                     </a>
-                    <a href="deleteCategory">
+                    <a href="removeCategory">
                         <button type="button" class="btn"><?=Localizer::translate('Remove Category')?></button>
                     </a>
                 </div>

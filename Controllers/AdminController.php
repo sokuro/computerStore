@@ -52,6 +52,25 @@ class AdminController extends Controller
         }
     }
 
+    public function actionRemoveProduct($params){
+
+        $productId = (int)$params[0];
+
+        $this->viewBag['products'] = Product::getAllProducts();
+
+//        $this->viewBag['removeProduct'] = Product::deleteById($id);
+
+        $this->template = "removeProduct";
+
+        $product = Product::getById($productId);
+
+        if(is_int($productId) && $product !== null) {
+            Product::deleteById($product);
+        }
+
+        $this->getView("Admin", $this->template);
+    }
+
     public function actionAddCategory()
     {
         $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
