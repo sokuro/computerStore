@@ -9,20 +9,29 @@
             <div class="section-content">
 
                 <div>
-                    <a href="add">
+                    <a href="addProduct">
                         <button type="button" class="btn"><?=Localizer::translate('Add Product')?></button>
                     </a>
-                </div>
-
-                <div>
-                    <a href="add">
-                        <button type="button" class="btn"><?=Localizer::translate('Add Category')?></button>
+                    <a href="deleteProduct">
+                        <button type="button" class="btn"><?=Localizer::translate('Remove Product')?></button>
                     </a>
                 </div>
 
                 <div>
-                    <a href="add">
+                    <a href="addCategory">
+                        <button type="button" class="btn"><?=Localizer::translate('Add Category')?></button>
+                    </a>
+                    <a href="deleteCategory">
+                        <button type="button" class="btn"><?=Localizer::translate('Remove Category')?></button>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="addUser">
                         <button type="button" class="btn"><?=Localizer::translate('Add User')?></button>
+                    </a>
+                    <a href="removeUser">
+                        <button type="button" class="btn"><?=Localizer::translate('Remove User')?></button>
                     </a>
                 </div>
 
