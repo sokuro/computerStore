@@ -63,7 +63,14 @@ class User extends BaseEntity{
 
     public static function getUserById($id)
     {
+//        $result = DB::doQuery('SELECT * FROM' .self::$tableName . 'WHERE id = ' . $id);
         return DB::doQuery('SELECT * FROM' .self::$tableName . 'WHERE id = ' . $id);
+
+//        if($result != null){
+//            return $result->fetch_object(__CLASS__);
+//        }
+//
+//        return null;
     }
 
     public static function getUserBySessId($sessId){
@@ -96,11 +103,17 @@ class User extends BaseEntity{
     {
         $result = DB::doQuery('SELECT * FROM ' . self::$tableName);
 
-        if($result != null){
-            return $result->fetch_object(__CLASS__);
-        }
+        $users = array();
 
-        return null;
+//        if($result != null){
+//            return $result->fetch_object(__CLASS__);
+//        }
+
+        while($user = $result->fetch_object("User"))
+        {
+            $users[] = $user;
+        }
+        return $users;
     }
 }
 ?>
