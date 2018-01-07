@@ -8,9 +8,9 @@
                     </div>
                     <div>
                         <ul class="list-unstyled">
-                            <li><?= $this->viewBag["user"]->firstName ?></li>
-                            <li><?= $this->viewBag["user"]->lastName ?></li>
-                            <li><?= $this->viewBag["user"]->email ?></li>
+                            <li><?=Localizer::translate('First Name')?>: <?= $this->viewBag["user"]->firstName ?></li>
+                            <li><?=Localizer::translate('Last Name')?>: <?= $this->viewBag["user"]->lastName ?></li>
+                            <li><?=Localizer::translate('Email')?>: <?= $this->viewBag["user"]->email ?></li>
                         </ul>
                     </div>
                 <?php endif; ?>
