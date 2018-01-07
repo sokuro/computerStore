@@ -11,7 +11,7 @@
 //                            $headers = "FROM: ugorcak@gmx.ch";
 //                            mail("info@computerstore.ch","My subject",$msg,$headers);
 //                        ?>
-                        <a style="color: white" href="mailto:info@computerstore.ch">info@computerstore.ch</a>
+                        <a style="color: white" href="mailto:info@computerstore.ch">info@computers-stores.com</a>
                     </li>
                     <li>0794443322</li>
                 </ul>
