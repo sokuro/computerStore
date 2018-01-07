@@ -13,17 +13,17 @@
                     <span class="bar"></span>
                 </div>
                 <div class="product-add">
-                    <input name="descrEN" type="text" placeholder="<?=Localizer::translate('Description')?>" value="<?= isset($_POST['descrEN']) ? $_POST['descrEN'] : ''?>" required>
+                    <input name="descrEN" type="text" placeholder="<?=Localizer::translate('Description EN')?>" value="<?= isset($_POST['descrEN']) ? $_POST['descrEN'] : ''?>" required>
                     <span class="highlight"></span>
                     <span class="bar"></span>
                 </div>
                 <div class="product-add">
-                    <input name="descrDE" type="text" placeholder="<?=Localizer::translate('Description')?>" value="<?= isset($_POST['descrDE']) ? $_POST['descrDE'] : ''?>" required>
+                    <input name="descrDE" type="text" placeholder="<?=Localizer::translate('Description DE')?>" value="<?= isset($_POST['descrDE']) ? $_POST['descrDE'] : ''?>" required>
                     <span class="highlight"></span>
                     <span class="bar"></span>
                 </div>
                 <div class="product-add">
-                    <input name="descrFR" type="text" placeholder="<?=Localizer::translate('Description')?>" value="<?= isset($_POST['descrFR']) ? $_POST['descrFR'] : ''?>" required>
+                    <input name="descrFR" type="text" placeholder="<?=Localizer::translate('Description FR')?>" value="<?= isset($_POST['descrFR']) ? $_POST['descrFR'] : ''?>" required>
                     <span class="highlight"></span>
                     <span class="bar"></span>
                 </div>
@@ -48,7 +48,7 @@
                     <span class="bar"></span>
                 </div>
 
-                <input class="btn" type="submit" name="Add Product" value="<?=Localizer::translate('Add Product')?>">
+                <input class="btn2" type="submit" name="Add Product" value="<?=Localizer::translate('Add Product')?>">
             </form>
         </div>
     </section>
