@@ -41,7 +41,14 @@
                     <span class="highlight"></span>
                     <span class="bar"></span>
                 </div>
-                <input class="btn" type="submit" name="Sign Up" value="<?=Localizer::translate('Add User')?>">
+<!--könnte man noch hinzufügen-->
+                <div class="login-input">
+                    <input name="lastName" type="number" placeholder="Rolle" min="1" max="2" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <input class="btn2" type="submit" name="Sign Up" value="<?=Localizer::translate('Add User')?>">
             </form>
 
         </div>

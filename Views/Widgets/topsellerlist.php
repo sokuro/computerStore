@@ -1,6 +1,6 @@
 <div>
     <div class="title">
-        <h3><?= Localizer::translate('Top Sellers')?></h3>
+        <h3><?= Localizer::translate('Top Sellers')?>:</h3>
     </div>
         <?php foreach(TopSellerList::$items as $key => $value): ?>
          <div class="row">

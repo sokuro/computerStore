@@ -1,41 +1,32 @@
 <?php
-    require_once(ROOT."/Views/Shared/header.php");
-?>
-
-
+    require_once(ROOT."/Views/Shared/header.php"); ?>
 <html lang="<?=$_SESSION['lang']?>">
     <main class="row reverse-sm">
         <section class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
             <div class="section-content">
-
-                <div>
-                    <a href="addProduct">
-                        <button type="button" class="btn"><?=Localizer::translate('Add Product')?></button>
+                    <a href="addProduct" class="linkadmin">
+                       <?=Localizer::translate('Add Product')?>
                     </a>
-                    <a href="removeProduct">
-                        <button type="button" class="btn"><?=Localizer::translate('Remove Product')?></button>
+                    <a href="removeProduct" class="linkadmin">
+                        <?=Localizer::translate('Remove Product')?>
                     </a>
-                </div>
-
-                <div>
-                    <a href="addCategory">
-                        <button type="button" class="btn"><?=Localizer::translate('Add Category')?></button>
+                    <a href="addCategory" class="linkadmin">
+                        <?=Localizer::translate('Add Category')?>
                     </a>
-                    <a href="removeCategory">
-                        <button type="button" class="btn"><?=Localizer::translate('Remove Category')?></button>
+                    <a href="removeCategory" class="linkadmin">
+                        <?=Localizer::translate('Remove Category')?>
                     </a>
-                </div>
-
-                <div>
-                    <a href="addUser">
-                        <button type="button" class="btn"><?=Localizer::translate('Add User')?></button>
+                    <a href="addUser" class="linkadmin">
+                        <?=Localizer::translate('Add User')?>
                     </a>
-                    <a href="removeUser">
-                        <button type="button" class="btn"><?=Localizer::translate('Remove User')?></button>
+                    <a href="removeUser" class="linkadmin">
+                        <?=Localizer::translate('Remove User')?>
                     </a>
-                </div>
-
             </div>
+
+<!--altes-->
+
+
         </section>
         <aside class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
     <!--            --><?php
