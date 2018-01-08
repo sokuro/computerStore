@@ -60,11 +60,11 @@ class Product extends BaseEntity
     {
         Helper::varDebug('DELETE FROM ' . self::$tableName . ' WHERE id = ' . $id);
 
-//        $result = DB::doQuery('DELETE * FROM ' . self::$tableName . ' WHERE id = ' . $id);
-        $result = DB::doQuery('DELETE FROM ' . self::$tableName . ' WHERE id = ' . $id);
-        Helper::varDebug($result);
+//        $result = DB::doQuery('DELETE FROM ' . self::$tableName . ' WHERE id = ' . $id);
+        return DB::doQuery('DELETE FROM ' . self::$tableName . ' WHERE id = ' . $id);
+//        Helper::varDebug($result);
 
-        $result->execute();
+//        $result->execute();
     }
 
     public static function getByIdWithProperty($id)
