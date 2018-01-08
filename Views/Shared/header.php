@@ -15,12 +15,12 @@
 
         <!--    Icons   -->
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png?v=11" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/assets/favicons/logoicon.png" sizes="32x32" />
        <!-- <link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png?v=11" sizes="16x16">-->
-        <link rel="icon" type="image/png" href="/assets/favicons/Bild1 (2).png?v=11" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/favicons/logoicon.png" sizes="16x16">
 
         <link rel="manifest" href="/assets/favicons/manifest.json">
-        <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="mask-icon" href="/assets/favicons/logoicon.png" >
 
         <!--    Scripts -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
