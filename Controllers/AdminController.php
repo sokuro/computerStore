@@ -54,18 +54,21 @@ class AdminController extends Controller
 
     public function actionRemoveProduct($params){
 
+
         $productId = (int)$params[0];
 
         $this->viewBag['products'] = Product::getAllProducts();
 
-//        $this->viewBag['removeProduct'] = Product::deleteById($id);
+       // $this->viewBag['removeProduct'] = Product::deleteById($productId);
 
         $this->template = "removeProduct";
 
         $product = Product::getById($productId);
 
+        Helper::varDebug($productId);
+
         if(is_int($productId) && $product !== null) {
-            Product::deleteById($product);
+            Product::deleteById($productId);
         }
 
         $this->getView("Admin", $this->template);
