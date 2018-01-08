@@ -19,6 +19,6 @@ class UrlHelper
 
     public static function getAdminUrl()
     {
-        return "/admin/show";
+        return "/admin/index";
     }
 }

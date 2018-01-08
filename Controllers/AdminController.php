@@ -9,7 +9,7 @@ class AdminController extends Controller
     protected $template;
 
 
-    public function actionShow()
+    public function actionIndex()
     {
 
         $this->template = "index";
@@ -65,7 +65,8 @@ class AdminController extends Controller
 
         $product = Product::getById($productId);
 
-        Helper::varDebug($productId);
+//        Helper::varDebug($productId);
+//        Helper::varDebug($product);
 
         if(is_int($productId) && $product !== null) {
             Product::deleteById($productId);
