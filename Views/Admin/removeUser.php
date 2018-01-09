@@ -13,9 +13,10 @@
                                 <h2><?=$value->username?></h2>
                             </span>
                         </div>
-                        <form action="/admin/removeUser" method="post">
+                        <form action="/admin/removeUser/<?= $value->id?>" method="get">
                             <div class="article-remove">
-                                <button type="remove" class="btn" value="<?= isset($_POST['id']) ? $_POST['id'] : '' ?>">Remove</button>
+                                <input type="hidden" value="<?= $value->id?>">
+                                <button type="remove" class="btn">Remove</button>
                             </div>
                         </form>
                     </article>

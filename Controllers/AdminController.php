@@ -109,15 +109,13 @@ class AdminController extends Controller
 
         $this->viewBag['categories'] = Category::getAll();
 
-//        $this->viewBag['removeCategory'] = Category::deleteById($id);
-
         $this->template = "removeCategory";
 
         $category = Category::get($categoryId);
 
-//        if(is_int($categoryId) && $category !== null) {
-//            Category::deleteById($category);
-//        }
+        if(is_int($categoryId) && $category !== null) {
+            Category::deleteById($category);
+        }
 
         $this->getView("Admin", $this->template);
     }
@@ -155,15 +153,13 @@ class AdminController extends Controller
 
         $this->viewBag['users'] = User::getAllUsers();
 
-//        $this->viewBag['removeUser'] = User::deleteById($id);
-
         $this->template = "removeUser";
 
         $user = User::getUserById($userId);
 
-//        if(is_int($userId) && $user !== null) {
-//            User::deleteById($user);
-//        }
+        if(is_int($userId) && $user !== null) {
+            User::deleteById($user);
+        }
 
         $this->getView("Admin", $this->template);
     }

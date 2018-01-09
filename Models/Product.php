@@ -58,8 +58,6 @@ class Product extends BaseEntity
 
     public static function deleteById($id)
     {
-        Helper::varDebug('DELETE FROM ' . self::$tableName . ' WHERE id = ' . $id);
-
 //        $result = DB::doQuery('DELETE FROM ' . self::$tableName . ' WHERE id = ' . $id);
         return DB::doQuery('DELETE FROM ' . self::$tableName . ' WHERE id = ' . $id);
 //        Helper::varDebug($result);

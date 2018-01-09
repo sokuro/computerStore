@@ -38,9 +38,7 @@ class Category extends BaseEntity{
 
     public static function deleteById($id)
     {
-        $result = DB::doQuery('DELETE * FROM ' . self::$tableName . ' WHERE id = ' . $id);
-
-        $result->execute();
+        return DB::doQuery('DELETE * FROM ' . self::$tableName . ' WHERE id = ' . $id);
     }
 
     public static function get($id)
