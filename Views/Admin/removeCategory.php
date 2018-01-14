@@ -23,7 +23,6 @@
                         </form>
                     </article>
 
-<!--                    <input class="btn" type="submit" name="Add Product" value="--><?//=Localizer::translate('Add Product')?><!--">                    -->
                 <?php endforeach; ?>
             <?php endif;?>
         </div>

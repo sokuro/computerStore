@@ -43,7 +43,7 @@ require_once(ROOT."/Views/Shared/header.php");
                     </ul>
                 </div>
                 <?php endif; ?>
-                <?php //Helper::varDebug($this->viewBag)?>
+
                 <h3><?=Localizer::translate("Your address")?></h3>
                 <?php foreach ($this->viewBag["address"] as $key => $value):?>
                     <p><?=$value?></p>

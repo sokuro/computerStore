@@ -26,26 +26,6 @@ class SearchController extends Controller
         $this->getView("Search", $this->template);
     }
 
-//    public function doSearch($value)
-//    {
-//        $this->template = "index";
-//
-//        if ($value) {
-//
-//            $product = new Product();
-//            $product->name = $_GET['query'];
-//
-//            $products = Product::getProductByName($product->name);
-//            $searchResults = array();
-//
-//            foreach ($products as $product) {
-//                $searchResults[] = new SearchResultWidget($product);
-//            }
-//            echo json_encode($searchResults);
-//
-//            $this->getView("Search", $this->template);
-//        }
-//    }
 
 }
 

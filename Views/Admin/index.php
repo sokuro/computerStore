@@ -24,15 +24,10 @@
                     </a>
             </div>
 
-<!--altes-->
-
 
         </section>
         <aside class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-    <!--            --><?php
-    //            if(isset($this->viewBag['cartItems']))
-    //                ShoppingCart::widget($this->viewBag['cartItems'])
-    //            ?>
+
         </aside>
     </main>
 </html>

@@ -35,7 +35,7 @@ class Router
         }else{
             $controller = new HomeController();
             $controller->actionError();
-            //echo "controller don't exist";
+
             die();
         }
     }

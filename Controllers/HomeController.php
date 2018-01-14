@@ -15,11 +15,6 @@ class HomeController extends Controller {
         // TODO get top sellers from CartItem
         $this->viewBag['topSeller'] = Product::getTopSeller();
 
-//        print_r($_SESSION);
-//        echo($_SESSION['logged_in']);
-
-
-//        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1)
         if(isset($_SESSION['logged_in']) && !$_SESSION['logged_in'])
         {
             $this->viewBag['cartItems'] = CartItem::getItemsWithProducts($_SESSION['sessid']);

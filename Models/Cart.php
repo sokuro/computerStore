@@ -81,14 +81,6 @@ class Cart extends BaseEntity
 
         return null;
 
-        // Helper::varDebug($result);
-        // exit();
-        // $carts = array();
-
-        // while ($cart = $result->fetch_object("Cart"))
-        //     $carts[] = $cart;
-
-        // return $carts;
     }
 
     public static function getByIdWithProperties($id)
@@ -106,12 +98,5 @@ class Cart extends BaseEntity
         return $carts;
     }
 
-    // public static function getItems(int $cartId)
-    // {
-    //     'SELECT * FROM user_sessions us JOIN cart_items ci ON ci.cartId = us.cartId JOIN products p ON p.id = ci.productId WHERE sessId='63z105vp8k7tjq6qn3g1gf0u7nm8gsao''
-    //     $result = DB::doQuery('SELECT * FROM '.self::$tableName.' c'.
-    //                             ' JOIN cart_items ci ON ci.cartId ='.$cartId.
-    //                             ' JOIN products p ON p.id = ci.productId'.
-    //                             ' WHERE  ')
-    // }
+
 }

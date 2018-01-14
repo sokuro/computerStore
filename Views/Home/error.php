@@ -8,7 +8,6 @@ require_once(ROOT."/Views/Shared/header.php");
     <h2>Error</h2>
 
 <?php
-    //Helper::varDebug($this->viewBag);
 
 require_once(ROOT."/Views/Shared/footer.php")
 ?>

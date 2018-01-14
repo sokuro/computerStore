@@ -74,7 +74,6 @@ class PaymentController extends Controller{
 
     public function actionOrder()
     {
-        //Helper::varDebug($_POST);
 
         $this->template = "order";
 

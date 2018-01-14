@@ -30,13 +30,10 @@ class User extends BaseEntity{
         }
         $preparedQuery->execute();
 
-        // Helper::varDebug($preparedQuery);
-        // Helper::varDebug(DB::getDbConnection());
-
         $lastId = $preparedQuery->insert_id;
 
         Helper::varDebug($lastId);
-        //exit();
+
         return $lastId;
     }
 
@@ -50,7 +47,7 @@ class User extends BaseEntity{
         $hashPassword = Helper::getHash($password);
         $result = DB::doQuery('SELECT * FROM ' .self::$tableName . ' WHERE email ="'.$email.'" and password ="'.$hashPassword.'" LIMIT 1');
 
-//        Helper::varDebug($result);
+
 
         if($result != null){
             return $result->fetch_object(__CLASS__);
@@ -61,14 +58,9 @@ class User extends BaseEntity{
 
     public static function getUserById($id)
     {
-//        $result = DB::doQuery('SELECT * FROM' .self::$tableName . 'WHERE id = ' . $id);
+
         return DB::doQuery('SELECT * FROM' .self::$tableName . 'WHERE id = ' . $id);
 
-//        if($result != null){
-//            return $result->fetch_object(__CLASS__);
-//        }
-//
-//        return null;
     }
 
     public static function getUserBySessId($sessId){
@@ -88,7 +80,7 @@ class User extends BaseEntity{
     {
         $result = DB::doQuery('SELECT * FROM ' . self::$tableName .' WHERE email ="'.$email.'" LIMIT 1');
 
-//        Helper::varDebug($result);
+
 
         if($result != null){
             return $result->fetch_object(__CLASS__);
@@ -103,9 +95,6 @@ class User extends BaseEntity{
 
         $users = array();
 
-//        if($result != null){
-//            return $result->fetch_object(__CLASS__);
-//        }
 
         while($user = $result->fetch_object("User"))
         {

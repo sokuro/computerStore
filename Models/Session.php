@@ -30,12 +30,7 @@ class Session extends BaseEntity{
         }
         $preparedQuery->execute();
         
-        // Helper::varDebug($preparedQuery);
-        // Helper::varDebug(DB::getDbConnection());
-
         $lastId = $preparedQuery->insert_id;
-
-//        Helper::varDebug($lastId);
 
         return $lastId;
     }
@@ -43,8 +38,7 @@ class Session extends BaseEntity{
     public static function getBySessId(string $sessId)
     {
         $result = DB::doQuery('SELECT * FROM ' . self::$tableName .' WHERE sessId ="'.$sessId.'" ORDER BY created DESC LIMIT 1');
-        
-        //Helper::varDebug($result);
+
 
         if($result != null){
             return $result->fetch_object("Session");

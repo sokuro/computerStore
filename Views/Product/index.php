@@ -1,6 +1,6 @@
 <?php
     require_once(ROOT."/Views/Shared/header.php");
-//    Helper::varDebug($this->viewBag);
+
 ?>
 <main class="row reverse-sm">
     <section class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
@@ -24,7 +24,7 @@
                         <input type="hidden" name="price" value="<?=$this->viewBag['product']->price?>">
                         <input type="hidden" name="id" value="<?=$this->viewBag['product']->id?>">
                         <input class="btn" type="submit" value="Buy">
-                        <!--onclick="alert('submit');event.preventDefault();" -->
+
                     </form>
                 </div>
             </div>

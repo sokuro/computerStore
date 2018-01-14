@@ -5,12 +5,7 @@
                     <li>Bern, Laupenstrasse 77</li>
                     <li> CH-3004</li>
                     <li>
-<!--                        --><?php
-//                            $msg = "First line of text";
-//                            $msg = wordwrap($msg,70);
-//                            $headers = "FROM: ugorcak@gmx.ch";
-//                            mail("info@computerstore.ch","My subject",$msg,$headers);
-//                        ?>
+
                         <a style="color: white" href="mailto:info@computerstore.ch">info@computers-stores.com</a>
                     </li>
                     <li>0794443322</li>

@@ -12,8 +12,6 @@ class CartController extends Controller
     {
         $this->template = "index";
 
-//        if(isset($_SESSION['sessid']))
-//        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1)
         if(isset($_SESSION['logged_in']) && !$_SESSION['logged_in'])
             $this->viewBag['cartItems'] = CartItem::getItemsWithProducts($_SESSION['sessid']);
 
@@ -30,20 +28,13 @@ class CartController extends Controller
             $quantity = 1;
         }
 
-        // session doesn't exist
-        $session = Session::getBySessId($_SESSION['sessid']);
 
-//        Helper::varDebug($session);
-//        exit();
+        $session = Session::getBySessId($_SESSION['sessid']);
 
         if($session !== null){
             $payment = Payment::getPaymentByUserId($session->userId);
         }
 
-//        Helper::varDebug($payment);
-//        exit();
-
-        // user hasn't payment
         if(!isset($payment)){
             $cart = new Cart();
             $cartId = Cart::create($cart);

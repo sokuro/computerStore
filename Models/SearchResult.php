@@ -10,7 +10,7 @@ class SearchResult extends BaseEntity
     public function __construct(Product $product)
     {
         $this->name = $product->name;
-//        $this->image = $product->image;
+
 
         // to generate url use the helping method
         $this->url = UrlHelper::getProductUrl($product->id);

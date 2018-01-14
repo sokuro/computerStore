@@ -40,7 +40,7 @@
         <?php if(count(ShoppingCart::$items) > 0): ?>
             <form action="/payment/index" method="post">
                 <input class="btn" type="submit" value="<?=Localizer::translate('To Payment')?>">
-                <!--onclick="alert('submit');event.preventDefault();" -->
+
             </form>
         <?php else:?>
             <?=Localizer::translate("Your cart is empty")?>

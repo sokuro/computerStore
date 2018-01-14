@@ -58,11 +58,8 @@ class Product extends BaseEntity
 
     public static function deleteById($id)
     {
-//        $result = DB::doQuery('DELETE FROM ' . self::$tableName . ' WHERE id = ' . $id);
         return DB::doQuery('DELETE FROM ' . self::$tableName . ' WHERE id = ' . $id);
-//        Helper::varDebug($result);
 
-//        $result->execute();
     }
 
     public static function getByIdWithProperty($id)
@@ -79,30 +76,9 @@ class Product extends BaseEntity
             $products[] = $product;
         }
 
-//        Helper::varDebug($products);
-//        exit();
-
         return count($products) > 0 ? $products[0] : null;
     }
 
-//    public static function getImageById($id)
-//    {
-//        $result = DB::doQuery('SELECT im.image FROM '.self::$tableName.' p
-//                                LEFT JOIN images im ON p.id = im.id
-//                                where p.id = '.$id);
-//
-//        $images = array();
-//
-//        while($image = $result->fetch_object("Product"))
-//        {
-//            $images[] = $image;
-//        }
-//
-////        Helper::varDebug($products);
-////        exit();
-//
-//        return count($images) > 0 ? $images[0] : null;
-//    }
 
     public static function getImageById($id)
     {
@@ -116,8 +92,6 @@ class Product extends BaseEntity
             $products[] = $product;
         }
 
-//        Helper::varDebug($products);
-//        exit();
 
         return count($products) > 0 ? $products[0] : null;
     }

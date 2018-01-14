@@ -1,20 +1,6 @@
-/* Override */
 aside {
-    /*flex-direction: row !important;*/
+
 }
-
-/*#root {*/
-    /*position: fixed;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
-
-/*#root > iframe {*/
-    /*display: block;*/
-    /*height: calc(100vh - 30px);*/
-    /*width: 100%;*/
-    /*border: none;*/
-/*}*/
 
 #searchWindow {
     width: 120px;

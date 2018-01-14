@@ -2,7 +2,7 @@
     <main class="row reverse-sm">
         <section class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
             <div class="user-login">
-                <?php //Helper::varDebug($_POST)?>
+
                 <div>
                     <h3><?=Localizer::translate('Sign In')?></h3>
                 </div>

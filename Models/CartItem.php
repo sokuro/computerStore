@@ -60,9 +60,6 @@ class CartItem extends BaseEntity
         $result = DB::doQuery('SELECT * FROM '.self::$tableName.
                                 ' WHERE productId='.$productId.' AND cartId='.$cartId.' LIMIT 1');
 
-//        Helper::varDebug($result);
-//        exit();
-
         if($result != null){
             return $result->fetch_object(__CLASS__);
         }

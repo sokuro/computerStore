@@ -3,9 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 12. Nov 2016 um 14:23
 -- Server-Version: 10.1.16-MariaDB
--- PHP-Version: 7.0.9
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +16,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `comphub`
+
 --
 
 -- --------------------------------------------------------

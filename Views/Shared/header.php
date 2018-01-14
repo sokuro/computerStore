@@ -16,7 +16,7 @@
         <!--    Icons   -->
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" href="/assets/favicons/logoicon.png" sizes="32x32" />
-       <!-- <link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png?v=11" sizes="16x16">-->
+
         <link rel="icon" type="image/png" href="/assets/favicons/logoicon.png" sizes="16x16">
 
         <link rel="manifest" href="/assets/favicons/manifest.json">
@@ -87,8 +87,7 @@
                             </ul>
                         </div>
                         <div class="search col-xs-4 col-sm-4 col-md-4 col-lg-3">
-<!--                            <a href="/product/show/1">-->
-<!--                            <a href="Views\Search\index.php">-->
+
                             <a id="searchButton" href="#">
                                 <span class="fa fa-search"></span>
                             </a>
@@ -124,7 +123,7 @@
             </div>
             <div class="col-xs-12 hidden-xs">
                 <?php
-//                Helper::varDebug($this->viewBag);
+
                 if(isset($this->viewBag['categories']))
                     Breadcrumbs::widget($this->viewBag['categories'])
                 ?>
