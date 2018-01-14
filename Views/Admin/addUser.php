@@ -41,13 +41,16 @@
                     <span class="highlight"></span>
                     <span class="bar"></span>
                 </div>
-<!--könnte man noch hinzufügen-->
                 <div class="login-input">
-                    <input name="lastName" type="number" placeholder="Rolle" min="1" max="2" required>
+                    <Select class="admin-add" name="lastName" required>
+                        <option value="">Rolle wählen</option>
+                        <option value=1>Admin</option>
+                        <option value=2>User</option>
+                    </Select>
                     <span class="highlight"></span>
                     <span class="bar"></span>
                 </div>
-
+                <br/>
                 <input class="btn2" type="submit" name="Sign Up" value="<?=Localizer::translate('Add User')?>">
             </form>
 

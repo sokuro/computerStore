@@ -40,10 +40,17 @@
 	"Description DE": "Description DE",
 	"Description FR": "Description FR",
 	"Price": "Prix",
-	"Brand ID": "Marque ID",
-	"Category ID": "Catégorie ID",
+	"Brand ID": "selectez Marque",
+	"Category ID": "selectez catégorie",
 	"Image": "Image",
 	"Category Name EN": "Catégorie Nombre EN",
 	"Category Name DE": "Catégorie Nombre DE",
-	"Category Name FR": "Catégorie Nombre FN"
+	"Category Name FR": "Catégorie Nombre FN",
+	"PC":"Ordinateur",
+	"Server":"Serveur",
+	"Peripherie":"Périphérie",
+	"Components":"Composante",
+	"Software":"Logiciel",
+	"Notebooks":"Ordinateur portable",
+	"Workstation":"Workstation"
 }
