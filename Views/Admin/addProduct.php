@@ -67,7 +67,7 @@ require_once(ROOT."/Views/Shared/header.php");
                         <span class="bar"></span>
                     </div>
                     <div >
-                        <input class="admin-add" name="image" type="text" placeholder="<?=Localizer::translate('Image')?>" value="<?= isset($_POST['image']) ? $_POST['image'] : ''?>" required>
+                        <input class="admin-add" name="image" type="text" placeholder="<?=Localizer::translate('Image')?>" value="<?= isset($_POST['image']) ? ($_POST['image']) : ('/assets/images/placeholder.png') ?>" >
                         <span class="highlight"></span>
                         <span class="bar"></span>
                     </div>

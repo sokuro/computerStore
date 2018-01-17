@@ -7,7 +7,7 @@
         <?php if(isset($this->viewBag['product'])):?>
             <div class="sectionOverview">
                 <div class="productImage">
-                    <img id="imageProduct" src="<?= $this->viewBag['product']->image ;?>">
+                    <img id="imageProduct" src="<?= $this->viewBag['product']->image ;?>" alt="/assets/images/placeholder.png">
                 </div>
                 <div class="shortSpecification">
                     <span><h2><?= $this->viewBag['product']->name ;?></h2></span>
