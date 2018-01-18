@@ -138,6 +138,7 @@ class AdminController extends Controller
                 $user->username = $_POST['username'];
                 $user->firstName = $_POST['firstName'];
                 $user->lastName = $_POST['lastName'];
+                $user->roleId = $_POST['roleId'];
                 $user->id = User::create($user);
 
                 $this->template = "index";

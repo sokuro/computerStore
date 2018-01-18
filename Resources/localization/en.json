@@ -49,5 +49,6 @@
 	"Components":"Components",
 	"Software":"Software",
 	"Notebooks":"Notebooks",
-	"Workstation":"Workstation"
+	"Workstation":"Workstation",
+	"Role":"Chose Role"
 }
