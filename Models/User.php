@@ -42,10 +42,10 @@ class User extends BaseEntity{
         return DB::doQuery('DELETE * FROM ' . self::$tableName . ' WHERE id = ' . $id);
     }
 
-    public static function getUser($email, $password)
+    public static function getUser($username, $password)
     {
         $hashPassword = Helper::getHash($password);
-        $result = DB::doQuery('SELECT * FROM ' .self::$tableName . ' WHERE email ="'.$email.'" and password ="'.$hashPassword.'" LIMIT 1');
+        $result = DB::doQuery('SELECT * FROM ' .self::$tableName . ' WHERE username ="'.$username.'" and password ="'.$hashPassword.'" LIMIT 1');
 
 
 

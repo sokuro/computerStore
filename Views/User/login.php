@@ -17,7 +17,8 @@
                 <?php endif; ?>
                 <form action="/user/login" method="post">
                     <div class="login-input">
-                        <input name="email" type="email" placeholder="<?=Localizer::translate('Email')?>" value="<?= isset($_POST['email']) ? $_POST['email'] : ''?>" required>
+                        <input name="username" type="text" placeholder="<?=Localizer::translate('Login')?>" value="<?= isset($_POST['username']) ? $_POST['username'] : ''?>" required>
+
                         <span class="highlight"></span>
                         <span class="bar"></span>
                     </div>

@@ -19,10 +19,10 @@ class UserController extends Controller{
 
         $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
 
-        if(!isset($_POST['email']) || !isset($_POST['password'])){
+        if(!isset($_POST['username']) || !isset($_POST['password'])){
             $this->template = "login";
         }else{
-            $login = $_POST['email'];
+            $login = $_POST['username'];
             $pass = $_POST['password'];
 
             $user = User::getUser($login, $pass);
