@@ -54,6 +54,7 @@ class AdminController extends Controller
 
     public function actionRemoveProduct($params){
 
+        $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
 
         $productId = (int)$params[0];
 
