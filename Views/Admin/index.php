@@ -9,7 +9,7 @@
                     </a>
                     <a href="removeProduct" class="linkadmin">
                         <?=Localizer::translate('Remove Product')?>
-                    ad
+                    </a>
                     <a href="addCategory" class="linkadmin">
                         <?=Localizer::translate('Add Category')?>
                     </a>
