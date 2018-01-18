@@ -11,17 +11,18 @@ class User extends BaseEntity{
 
     public static function create(User $user){
 
-        $query = "INSERT INTO " . self::$tableName . "(username, firstName, lastName, password, email) VALUES (?, ?, ?, ?, ?)";
+        $query = "INSERT INTO " . self::$tableName . "(username, firstName, lastName, password, email, roleId) VALUES (?, ?, ?, ?, ?, ?)";
 
         $preparedQuery = DB::getDbConnection()->prepare($query);
 
         $success = $preparedQuery->bind_param(
-            'sssss',
+            'sssssi',
             $user->username,
             $user->firstName,
             $user->lastName,
             $user->password,
-            $user->email
+            $user->email,
+            $user->roleId
         );
 
         if(!$success){

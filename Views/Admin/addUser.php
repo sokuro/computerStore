@@ -42,8 +42,8 @@
                     <span class="bar"></span>
                 </div>
                 <div class="login-input">
-                    <Select class="admin-add" name="lastName" required>
-                        <option value="">Rolle wählen</option>
+                    <Select class="admin-add" name="roleId" required>
+                        <option value="" class="selected"><?=Localizer::translate('Role')?></option>
                         <option value=1>Admin</option>
                         <option value=2>User</option>
                     </Select>

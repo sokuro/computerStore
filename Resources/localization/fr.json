@@ -52,5 +52,6 @@
 	"Components":"Composante",
 	"Software":"Logiciel",
 	"Notebooks":"Ordinateur portable",
-	"Workstation":"Workstation"
+	"Workstation":"Workstation",
+	"Role":"Role choisir"
 }

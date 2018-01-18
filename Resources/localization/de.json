@@ -52,5 +52,6 @@
 	"Components":"Komponente",
 	"Software":"Computerprogramme",
 	"Notebooks":"Laptop",
-	"Workstation":"Arbeitsstation"
+	"Workstation":"Arbeitsstation",
+	"Role":"Role auswählen"
 }
