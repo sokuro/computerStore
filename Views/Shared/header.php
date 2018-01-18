@@ -62,7 +62,7 @@
                                     <a href="/user/signup"><?= Localizer::translate('Sign Up')?></a>
                                 <?php else: ?>
                                     <?php if(isset($_SESSION['role']) && $_SESSION['role']==1):?>
-                                        <a href="/admin/index">Admin</a>
+                                        <a href="/admin/index">Yoda</a>
                                     <?php endif; ?>
                                     <a href="/user/login"><?=$_SESSION['user']?></a>
                                     <a href="/user/logout"
