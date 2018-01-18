@@ -238,7 +238,7 @@ a.linkadmin:hover {
 
 .title h3{
     margin: 0 auto;
-    color:white;
+    color:black;
     font-weight:normal;
 }
 
@@ -539,4 +539,9 @@ font-size:18px;
 #imageProduct {
     max-width: 400px;
     max-height: 400px;
+}
+
+#orderShipped {
+    padding-left: 10px;
+    font-size: 18px;
 }

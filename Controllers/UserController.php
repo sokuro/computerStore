@@ -108,12 +108,10 @@ class UserController extends Controller{
 
         $payment = Payment::getPaymentByUserId($user->id);
 
-        //Helper::varDebug($payment);
 
         if($payment !== null)
             $this->viewBag['cartItems'] = CartItem::getItems($payment->cartId);
 
-        //Helper::varDebug($this->viewBag);
 
         $this->getView("User", $this->template);
     }

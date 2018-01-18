@@ -29,9 +29,6 @@ class Cart extends BaseEntity
             return false;
         }
         $preparedQuery->execute();
-        
-        // Helper::varDebug($preparedQuery);
-        // Helper::varDebug(DB::getDbConnection());
 
         $lastId = $preparedQuery->insert_id;
 

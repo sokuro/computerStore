@@ -64,17 +64,8 @@ class CartController extends Controller
         }else{
             $cartItem->quantity += $quantity;
 
-//            Helper::varDebug($cartItem);
-//            exit();
-
             CartItem::update($cartItem);
         }
-
-//        Helper::varDebug($payment);
-//        Helper::varDebug($cart);
-//        Helper::varDebug($cartItem);
-//         exit();
-
 
         header("Location: ".$_SERVER["HTTP_REFERER"]);
         die();

@@ -14,14 +14,11 @@ class AdminController extends Controller
 
         $this->template = "index";
 
-//        $this->viewBag['menuItemsAdmin'] = Admin::showElements();
-
         $this->getView("Admin", $this->template);
     }
 
     public function actionAddProduct()
     {
-//        Helper::varDebug($_POST);
         $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
 
         if(!isset($_POST['name']) && !isset($_POST['descrEN']) && !isset($_POST['descrDE']) && !isset($_POST['descrFR']) && !isset($_POST['price']) && !isset($_POST['brandId']) && !isset($_POST['categoryId']) && !isset($_POST['image'])){

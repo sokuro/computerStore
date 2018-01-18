@@ -12,7 +12,7 @@ class HomeController extends Controller {
         $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
 
         $this->viewBag['lastItems'] = Product::getLatestProducts();
-        // TODO get top sellers from CartItem
+
         $this->viewBag['topSeller'] = Product::getTopSeller();
 
         if(isset($_SESSION['logged_in']) && !$_SESSION['logged_in'])

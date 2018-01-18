@@ -29,7 +29,6 @@ class Router
             }else{
                 $controller = new HomeController();
                 $controller->actionError();
-                //echo "method don't exist";
                 die();
             }
         }else{

@@ -15,6 +15,6 @@ class ShoppingCart extends Widget{
             $result[$value->productId][] = $value;
         }
         return $result;
-//        Helper::varDebug($result);
     }
+
 }
