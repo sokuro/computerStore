@@ -114,7 +114,7 @@ class AdminController extends Controller
         $category = Category::get($categoryId);
 
         if(is_int($categoryId) && $category !== null) {
-            Category::deleteById($category);
+            Category::deleteById($categoryId);
         }
 
         $this->getView("Admin", $this->template);
