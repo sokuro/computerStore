@@ -27,7 +27,7 @@
                         <span class="highlight"></span>
                         <span class="bar"></span>
                     </div>
-                    <input class="btn" type="submit" name="Send" value="<?=Localizer::translate('Send')?>">
+                    <input class="btn2" type="submit" name="Send" value="<?=Localizer::translate('Send')?>">
                 </form>
             </div>
         </section>

@@ -16,7 +16,7 @@
                         <form action="/admin/removeUser/<?= $value->id?>" method="get">
                             <div class="article-remove">
                                 <input type="hidden" value="<?= $value->id?>">
-                                <button type="remove" class="btn">Remove</button>
+                                <button type="remove" class="btn3">Remove</button>
                             </div>
                         </form>
                     </article>
