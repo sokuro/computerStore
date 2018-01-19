@@ -42,6 +42,7 @@
 	"Price": "Prix",
 	"Brand ID": "selectez Marque",
 	"Category ID": "selectez catégorie",
+	"Category level":"selectez catégorie niveau",
 	"Image": "Image",
 	"Category Name EN": "Catégorie Nombre EN",
 	"Category Name DE": "Catégorie Nombre DE",
@@ -53,5 +54,7 @@
 	"Software":"Logiciel",
 	"Notebooks":"Ordinateur portable",
 	"Workstation":"Workstation",
-	"Role":"Role choisir"
+	"Role":"Role choisir",
+	"new Superproduct":"noveau géneral catègorie",
+	"SubPC":"Subcatégorie-Ordinateur"
 }

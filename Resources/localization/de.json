@@ -42,16 +42,20 @@
 	"Price": "Preis",
 	"Brand ID": "Marke wählen",
 	"Category ID": "Kategorie wählen",
+	"Category level":"Kategoriestufe wählen",
 	"Image": "Bild",
 	"Category Name EN": "Kategorie Name EN",
 	"Category Name DE": "Kategorie Name DE",
 	"Category Name FR": "Kategorie Name FN",
 	"PC":"Einzelplatzrechner",
+	"SubPC":"Subkategorie-Einzelplatzrechner",
 	"Server":"Server",
 	"Peripherie":"Peripherie",
 	"Components":"Komponente",
 	"Software":"Computerprogramme",
 	"Notebooks":"Laptop",
 	"Workstation":"Arbeitsstation",
-	"Role":"Role auswählen"
+	"Role":"Role auswählen",
+	"new Superproduct":"neue Oberkategorie"
+}
 }

@@ -23,7 +23,14 @@
                     <span class="bar"></span>
                 </div>
                 <div class="category-add">
-                    <input class="admin-add"  name="parentId" type="text" placeholder="parentID" value="<?= isset($_POST['parentId']) ? $_POST['parentId'] : ''?>" required>
+                    <!--<input class="admin-add"  name="parentId" type="text" placeholder="parentID" value="<?= isset($_POST['parentId']) ? $_POST['parentId'] : ''?>" required>-->
+                    <Select class="admin-add" name="parentId" type="text" required>
+                        <option value=""><?=Localizer::translate('Category level')?></option>
+                        <option value="0"><?=Localizer::translate('new Superproduct')?></option>
+                        <option value="1"><?=Localizer::translate('SubPC')?></option>
+                    </Select>
+
+
                     <span class="highlight"></span>
                     <span class="bar"></span>
                 </div>

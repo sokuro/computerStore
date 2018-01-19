@@ -29,6 +29,7 @@
 	"Add Product": "Add Product",
 	"Remove Product": "Remove Product",
 	"Add Category": "Add Category",
+	"Category level":"Select Category level",
 	"Remove Category": "Remove Category",
 	"Add User": "Add User",
 	"Remove User": "Remove User",
@@ -50,5 +51,7 @@
 	"Software":"Software",
 	"Notebooks":"Notebooks",
 	"Workstation":"Workstation",
-	"Role":"Chose Role"
+	"Role":"Chose Role",
+	"new Superproduct":"new general category",
+	"SubPC":"Subcategory-PC"
 }
