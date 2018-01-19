@@ -40,7 +40,7 @@
                         <span class="highlight"></span>
                         <span class="bar"></span>
                     </div>
-                    <input class="btn" type="submit" name="Sign Up" value="<?=Localizer::translate('Sign Up')?>">
+                    <input class="btn2" type="submit" name="Sign Up" value="<?=Localizer::translate('Sign Up')?>">
                 </form>
             </div>
         </section>
