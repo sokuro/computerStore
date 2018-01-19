@@ -225,7 +225,7 @@ class AdminController extends Controller
             Helper::varDebug($user);
 
             if(is_int($userId) && $user !== null) {
-                User::deleteById($user);
+                User::deleteById($userId);
             }
 
             $this->getView("Admin", $this->template);
