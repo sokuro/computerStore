@@ -120,6 +120,8 @@ class AdminController extends Controller
 
     public function actionAddUser()
     {
+//        Helper::varDebug($_POST);
+
         if(!isset($_POST['username']) && !isset($_POST['password']) && !isset($_POST['firstName']) && !isset($_POST['lastName']) && !isset($_POST['email'])){
             $this->template = "addUser";
             $this->getView("Admin", $this->template);

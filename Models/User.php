@@ -2,7 +2,7 @@
 class User extends BaseEntity{
     private static $tableName = "users";
 
-    public $id, $username, $firstName, $lastName, $password, $email;
+    public $id, $username, $firstName, $lastName, $password, $email, $roleId;
 
     public function __construct()
     {
@@ -33,7 +33,6 @@ class User extends BaseEntity{
 
         $lastId = $preparedQuery->insert_id;
 
-        Helper::varDebug($lastId);
 
         return $lastId;
     }

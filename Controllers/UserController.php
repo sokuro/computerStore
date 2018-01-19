@@ -42,7 +42,7 @@ class UserController extends Controller{
             }else{
                 // user cannot be logged in
                 $this->viewBag['errors'] = array(
-                    "email or passwort is wrong"
+                    "username or passwort is wrong"
                 );
                 $this->template = "login";
             }
@@ -54,6 +54,7 @@ class UserController extends Controller{
     public function actionSignup()
     {
 //        Helper::varDebug($_POST);
+
         $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
 
         if(!isset($_POST['username']) && !isset($_POST['password']) && !isset($_POST['firstName']) && !isset($_POST['lastName']) && !isset($_POST['email'])){
@@ -72,6 +73,7 @@ class UserController extends Controller{
                 $user->username = $_POST['username'];
                 $user->firstName = $_POST['firstName'];
                 $user->lastName = $_POST['lastName'];
+                $user->roleId = 2;                  // necessary workaround 'cause of the implemented Admin-Mode
                 $user->id = User::create($user);
 
                 $this->template = "login";

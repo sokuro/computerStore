@@ -8,10 +8,5 @@ $(document).ready(function () {
         });
     });
 
-    // $(function goBack() {
-    //     $("#backButton").click(function ( event ) {
-    //         event.history.go(-1);
-    //     });
-    // });
 
 });
