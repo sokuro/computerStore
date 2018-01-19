@@ -39,7 +39,7 @@ class User extends BaseEntity{
 
     public static function deleteById($id)
     {
-        return DB::doQuery('DELETE * FROM ' . self::$tableName . ' WHERE id = ' . $id);
+        return DB::doQuery('DELETE FROM ' . self::$tableName . ' WHERE id = ' . $id);
     }
 
     public static function getUser($username, $password)
@@ -93,7 +93,7 @@ class User extends BaseEntity{
     {
         $result = DB::doQuery('SELECT * FROM ' . self::$tableName);
 
-        $users = array();
+//        $users = array();
 
 
         while($user = $result->fetch_object("User"))

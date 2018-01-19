@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function actionAddProduct()
     {
-        $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
+//        $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
 
         if(!isset($_POST['name']) && !isset($_POST['descrEN']) && !isset($_POST['descrDE']) && !isset($_POST['descrFR']) && !isset($_POST['price']) && !isset($_POST['brandId']) && !isset($_POST['categoryId']) && !isset($_POST['image'])){
             $this->template = "addProduct";
@@ -49,33 +49,53 @@ class AdminController extends Controller
         }
     }
 
-    public function actionRemoveProduct($params){
-
-        $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
-
-        $productId = (int)$params[0];
+    /**
+     * Necessary to avoid Hostinger 500 Server Error!
+     *
+     * Entry View, still without an ID as a delete parameter
+     */
+    public function actionRemoveProduct(){
 
         $this->viewBag['products'] = Product::getAllProducts();
 
-       // $this->viewBag['removeProduct'] = Product::deleteById($productId);
-
         $this->template = "removeProduct";
-
-        $product = Product::getById($productId);
-
-//        Helper::varDebug($productId);
-//        Helper::varDebug($product);
-
-        if(is_int($productId) && $product !== null) {
-            Product::deleteById($productId);
-        }
 
         $this->getView("Admin", $this->template);
     }
 
+    /**
+     * The actual ActionMethod to delete a property with an ID
+     */
+    public function actionRemoveProductById($params){
+
+        $this->viewBag['products'] = Product::getAllProducts();
+
+        $this->template = "removeProduct";
+
+//        Helper::varDebug($params);
+
+        if ($params > 0) {
+
+            $productId = (int)$params[0];
+
+            Helper::varDebug($productId);
+
+            $product = Product::getById($productId);
+
+            Helper::varDebug($product);
+
+            if(is_int($productId) && $product !== null) {
+                Product::deleteById($productId);
+            }
+
+            $this->getView("Admin", $this->template);
+        }
+
+    }
+
     public function actionAddCategory()
     {
-        $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
+//        $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
 
         if(!isset($_POST['nameEN']) && !isset($_POST['nameDE']) && !isset($_POST['nameFR']) && !isset($_POST['parentId'])) {
             $this->template = "addCategory";
@@ -101,21 +121,44 @@ class AdminController extends Controller
         }
     }
 
-    public function actionRemoveCategory($params){
-
-        $categoryId = (int)$params[0];
+    /**
+     * Necessary to avoid Hostinger 500 Server Error!
+     *
+     * Entry View, still without an ID as a delete parameter
+     */
+    public function actionRemoveCategory(){
 
         $this->viewBag['categories'] = Category::getAll();
 
         $this->template = "removeCategory";
 
-        $category = Category::get($categoryId);
+        $this->getView("Admin", $this->template);
+    }
 
-        if(is_int($categoryId) && $category !== null) {
-            Category::deleteById($categoryId);
+    /**
+     * The actual ActionMethod to delete a property with an ID
+     */
+    public function actionRemoveCategoryById($params){
+
+        $this->viewBag['categories'] = Category::getAll();
+
+        $this->template = "removeCategory";
+
+        if ($params > 0) {
+
+            $categoryId = (int)$params[0];
+
+            Helper::varDebug($categoryId);
+
+            $category = Category::get($categoryId);
+
+            if(is_int($categoryId) && $category !== null) {
+                Category::deleteById($categoryId);
+            }
+
+            $this->getView("Admin", $this->template);
         }
 
-        $this->getView("Admin", $this->template);
     }
 
     public function actionAddUser()
@@ -148,21 +191,46 @@ class AdminController extends Controller
         }
     }
 
-    public function actionRemoveUser($params){
-
-        $userId = (int)$params[0];
+    /**
+     * Necessary to avoid Hostinger 500 Server Error!
+     *
+     * Entry View, still without an ID as a delete parameter
+     */
+    public function actionRemoveUser() {
 
         $this->viewBag['users'] = User::getAllUsers();
 
         $this->template = "removeUser";
 
-        $user = User::getUserById($userId);
+        $this->getView("Admin", $this->template);
+    }
 
-        if(is_int($userId) && $user !== null) {
-            User::deleteById($user);
+    /**
+     * The actual ActionMethod to delete a property with an ID
+     */
+    public function actionRemoveUserById($params){
+
+        $this->viewBag['users'] = User::getAllUsers();
+
+        $this->template = "removeUser";
+
+        if ($params > 0) {
+
+            $userId = (int)$params[0];
+
+            Helper::varDebug($userId);
+
+            $user = User::getUserById($userId);
+
+            Helper::varDebug($user);
+
+            if(is_int($userId) && $user !== null) {
+                User::deleteById($user);
+            }
+
+            $this->getView("Admin", $this->template);
         }
 
-        $this->getView("Admin", $this->template);
     }
 
     private function formValidateProduct($array){
