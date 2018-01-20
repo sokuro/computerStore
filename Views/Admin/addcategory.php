@@ -9,24 +9,24 @@
             <a href="addProduct" class="linkadmin">
                 <?=Localizer::translate('Add Product')?>
             </a>
-            <a href="removeProduct" class="linkadmin">
+            <a href="removeproduct" class="linkadmin">
                 <?=Localizer::translate('Remove Product')?>
             </a>
-            <a href="addCategory" class="linkadmin">
+            <a href="addcategory" class="linkadmin">
                 <?=Localizer::translate('Add Category')?>
             </a>
-            <a href="removeCategory" class="linkadmin">
+            <a href="removecategory" class="linkadmin">
                 <?=Localizer::translate('Remove Category')?>
             </a>
-            <a href="addUser" class="linkadmin">
+            <a href="adduser" class="linkadmin">
                 <?=Localizer::translate('Add User')?>
             </a>
-            <a href="removeUser" class="linkadmin">
+            <a href="removeuser" class="linkadmin">
                 <?=Localizer::translate('Remove User')?>
             </a>
         </div>
         <div class="section-content">
-            <form action="/admin/addCategory" method="post">
+            <form action="/admin/addcategory" method="post">
                 <div>
                     <input  class="admin-add" name="nameEN" type="text" placeholder="<?=Localizer::translate('Category Name EN')?>" value="<?= isset($_POST['nameEN']) ? $_POST['nameEN'] : ''?>" required>
                     <span class="highlight"></span>

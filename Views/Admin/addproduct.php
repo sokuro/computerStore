@@ -4,27 +4,27 @@ require_once(ROOT."/Views/Shared/header.php");
     <main class="row reverse-sm">
         <section class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
             <div class="section-content">
-                <a href="addProduct" class="linkadmin">
+                <a href="addproduct" class="linkadmin">
                     <?=Localizer::translate('Add Product')?>
                 </a>
-                <a href="removeProduct" class="linkadmin">
+                <a href="removeproduct" class="linkadmin">
                     <?=Localizer::translate('Remove Product')?>
                 </a>
-                <a href="addCategory" class="linkadmin">
+                <a href="addcategory" class="linkadmin">
                     <?=Localizer::translate('Add Category')?>
                 </a>
-                <a href="removeCategory" class="linkadmin">
+                <a href="removecategory" class="linkadmin">
                     <?=Localizer::translate('Remove Category')?>
                 </a>
-                <a href="addUser" class="linkadmin">
+                <a href="adduser" class="linkadmin">
                     <?=Localizer::translate('Add User')?>
                 </a>
-                <a href="removeUser" class="linkadmin">
+                <a href="removeuser" class="linkadmin">
                     <?=Localizer::translate('Remove User')?>
                 </a>
             </div>
             <div class="section-content">
-                <form action="/admin/addProduct" method="post">
+                <form action="/admin/addproduct" method="post">
                     <div>
                         <input class="admin-add" name="name" type="text" placeholder="<?=Localizer::translate('Product Name')?>" value="<?= isset($_POST['name']) ? $_POST['name'] : ''?>" required>
                         <span class="highlight"></span>

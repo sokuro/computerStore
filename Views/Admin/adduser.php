@@ -6,22 +6,22 @@
 <main class="row reverse-sm">
     <section class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
         <div class="section-content">
-            <a href="addProduct" class="linkadmin">
+            <a href="addproduct" class="linkadmin">
                 <?=Localizer::translate('Add Product')?>
             </a>
-            <a href="removeProduct" class="linkadmin">
+            <a href="removeproduct" class="linkadmin">
                 <?=Localizer::translate('Remove Product')?>
             </a>
-            <a href="addCategory" class="linkadmin">
+            <a href="addcategory" class="linkadmin">
                 <?=Localizer::translate('Add Category')?>
             </a>
-            <a href="removeCategory" class="linkadmin">
+            <a href="removecategory" class="linkadmin">
                 <?=Localizer::translate('Remove Category')?>
             </a>
-            <a href="addUser" class="linkadmin">
+            <a href="adduser" class="linkadmin">
                 <?=Localizer::translate('Add User')?>
             </a>
-            <a href="removeUser" class="linkadmin">
+            <a href="removeuser" class="linkadmin">
                 <?=Localizer::translate('Remove User')?>
             </a>
         </div>
@@ -35,7 +35,7 @@
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
-            <form action="/admin/addUser" method="post">
+            <form action="/admin/adduser" method="post">
                 <div class="login-input">
                     <input name="username" type="text" placeholder="<?=Localizer::translate('Login')?>" value="<?= isset($_POST['username']) ? $_POST['username'] : ''?>" required>
                     <span class="highlight"></span>

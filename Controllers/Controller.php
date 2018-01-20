@@ -13,7 +13,7 @@ abstract class Controller{
             }
         }
         catch (Exception $e) {
-            echo $e->errorMessage();
+            echo $e->getMessage();
         }
     }
 

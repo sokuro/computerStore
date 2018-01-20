@@ -22,14 +22,14 @@ class AdminController extends Controller
 //        $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
 
         if(!isset($_POST['name']) && !isset($_POST['descrEN']) && !isset($_POST['descrDE']) && !isset($_POST['descrFR']) && !isset($_POST['price']) && !isset($_POST['brandId']) && !isset($_POST['categoryId']) && !isset($_POST['image'])){
-            $this->template = "addProduct";
+            $this->template = "addproduct";
             $this->getView("Admin", $this->template);
         }else{
             $errors = $this->formValidateProduct($_POST);
 
             if (count($errors) !== 0){
                 $this->viewBag["errors"] = $errors;
-                $this->template = "addProduct";
+                $this->template = "addproduct";
             }else{
                 $product = new Product();
                 $product->name = $_POST['name'];
@@ -58,7 +58,7 @@ class AdminController extends Controller
 
         $this->viewBag['products'] = Product::getAllProducts();
 
-        $this->template = "removeProduct";
+        $this->template = "removeproduct";
 
         $this->getView("Admin", $this->template);
     }
@@ -70,7 +70,7 @@ class AdminController extends Controller
 
         $this->viewBag['products'] = Product::getAllProducts();
 
-        $this->template = "removeProduct";
+        $this->template = "removeproduct";
 
 //        Helper::varDebug($params);
 
@@ -78,11 +78,7 @@ class AdminController extends Controller
 
             $productId = (int)$params[0];
 
-            Helper::varDebug($productId);
-
             $product = Product::getById($productId);
-
-            Helper::varDebug($product);
 
             if(is_int($productId) && $product !== null) {
                 Product::deleteById($productId);
@@ -98,14 +94,14 @@ class AdminController extends Controller
 //        $this->viewBag['menuItems'] = Category::getFirstLevelCategories();
 
         if(!isset($_POST['nameEN']) && !isset($_POST['nameDE']) && !isset($_POST['nameFR']) && !isset($_POST['parentId'])) {
-            $this->template = "addCategory";
+            $this->template = "addcategory";
             $this->getView("Admin", $this->template);
         }else{
             $errors = $this->formValidateCategory($_POST);
 
             if (count($errors) !== 0){
                 $this->viewBag["errors"] = $errors;
-                $this->template = "addCategory";
+                $this->template = "addcategory";
             }else{
                 $category = new Category();
                 $category->nameEN = $_POST['nameEN'];
@@ -130,7 +126,7 @@ class AdminController extends Controller
 
         $this->viewBag['categories'] = Category::getAll();
 
-        $this->template = "removeCategory";
+        $this->template = "removecategory";
 
         $this->getView("Admin", $this->template);
     }
@@ -142,13 +138,11 @@ class AdminController extends Controller
 
         $this->viewBag['categories'] = Category::getAll();
 
-        $this->template = "removeCategory";
+        $this->template = "removecategory";
 
         if ($params > 0) {
 
             $categoryId = (int)$params[0];
-
-            Helper::varDebug($categoryId);
 
             $category = Category::get($categoryId);
 
@@ -166,14 +160,14 @@ class AdminController extends Controller
 //        Helper::varDebug($_POST);
 
         if(!isset($_POST['username']) && !isset($_POST['password']) && !isset($_POST['firstName']) && !isset($_POST['lastName']) && !isset($_POST['email'])){
-            $this->template = "addUser";
+            $this->template = "adduser";
             $this->getView("Admin", $this->template);
         }else{
             $errors = $this->formValidateUser($_POST);
 
             if (count($errors) !== 0){
                 $this->viewBag["errors"] = $errors;
-                $this->template = "addUser";
+                $this->template = "adduser";
             }else{
                 $user = new User();
                 $user->email = $_POST['email'];
@@ -200,7 +194,7 @@ class AdminController extends Controller
 
         $this->viewBag['users'] = User::getAllUsers();
 
-        $this->template = "removeUser";
+        $this->template = "removeuser";
 
         $this->getView("Admin", $this->template);
     }
@@ -212,17 +206,13 @@ class AdminController extends Controller
 
         $this->viewBag['users'] = User::getAllUsers();
 
-        $this->template = "removeUser";
+        $this->template = "removeuser";
 
         if ($params > 0) {
 
             $userId = (int)$params[0];
 
-            Helper::varDebug($userId);
-
             $user = User::getUserById($userId);
-
-            Helper::varDebug($user);
 
             if(is_int($userId) && $user !== null) {
                 User::deleteById($userId);
